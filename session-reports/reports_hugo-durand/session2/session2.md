@@ -44,7 +44,7 @@ At first, we had trouble measuring an amperage value on the multimeter. Every ti
 
 On the video, the knee servo is not moving :
 
-<figure align="center"><img src="testing_amperage_trough_ssc32card.gif"  style="width:200px;"/><figcaption>Figure2.7 : Quantum behaviour of the servo motor</figcaption></figure>
+<figure align="center"><img src="testing_amperage_trough_ssc32card.gif"><figcaption>Figure2.7 : Quantum behaviour of the servo motor</figcaption></figure>
 
 I didn't have the presence of mind to film the moment when we managed to get the ammeter working. But in a typical servo motor movement at the execution of ```dog.move_forward()```, we observed an amperage curve that varies according to the executed movement, sometimes very strongly, when the motor is not solicited. I can clearly imagine this same behaviour accentuated on the ground, since the torque is higher when the paw supports its own weight in addition.
 
@@ -123,7 +123,7 @@ void CustomServo::move(int position, int time)
 ```
 
 </td>
-<td><img src="side_view_robot_standing_up.jpeg" style="height: 200px; width:200px;"/><figcaption>Figure2.8 : Polydog standing up</figcaption></td>
+<td><img src="side_view_robot_standing_up.jpeg" style="width:400px;"/><figcaption>Figure2.8 : Polydog standing up</figcaption></td>
 </tr>
 </table> 
 
