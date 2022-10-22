@@ -59,7 +59,12 @@ public:
      * @author ANJOU Raphael
      */
     void start();
-
+    /**
+     * This method places the robot in an upright stable position.
+     *
+     * @author DURAND Hugo
+     */
+    void hold_hip_knee();
     /**
      * This method place the shoulder in a position where all legs are perpendicular to the ground.
      *

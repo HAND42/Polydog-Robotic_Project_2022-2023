@@ -49,6 +49,17 @@ void PolyDog::start()
     this->hold_shoulders();
 }
 
+void PolyDog::hold_hip_knee()
+{
+
+    for (int j = 0; j < 20; j++)
+    {
+        leg_list[0].move_hip(70 + j);
+        leg_list[0].move_knee(120 + j);
+        delay(100);
+    }
+}
+
 /**
  * This method place the shoulder in a position where all legs are perpendicular to the ground.
  * <p>
@@ -87,6 +98,11 @@ void PolyDog::self_balancing()
         legB.move_shoulder(100 - i);
         legC.move_shoulder(100 - i);
         legD.move_shoulder(80 + i);
+        for (int i = 0; i < 4; i++)
+        {
+            leg_list[i].move_hip(70);
+            leg_list[i].move_knee(140);
+        }
         delay(20);
     }
 

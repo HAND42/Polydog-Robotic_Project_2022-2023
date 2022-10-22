@@ -86,16 +86,16 @@ public:
     int OFFSET_HIP_B = 40;   // 60 -> 141 : 0 -> 81 : 9 -> 90 : 9 -> 59
     int ANGLE_MIN_SHOULDER_B = -5;
     int ANGLE_MAX_SHOULDER_B = 180;
-    CustomServo SERVO_SHOULDER_B = CustomServo(2);
-    CustomServo SERVO_HIP_B = CustomServo(1);
-    CustomServo SERVO_KNEE_B = CustomServo(0);
+    CustomServo SERVO_SHOULDER_B = CustomServo(3);
+    CustomServo SERVO_HIP_B = CustomServo(2);
+    CustomServo SERVO_KNEE_B = CustomServo(1);
 
     // Constants for LEG C
     int OFFSET_KNEE_C = 179;
     int OFFSET_HIP_C = 240;
     int ANGLE_MIN_SHOULDER_C = 185;
     int ANGLE_MAX_SHOULDER_C = 5;
-    CustomServo SERVO_SHOULDER_C = CustomServo(18);
+    CustomServo SERVO_SHOULDER_C = CustomServo(19);
     CustomServo SERVO_HIP_C = CustomServo(17);
     CustomServo SERVO_KNEE_C = CustomServo(16);
 
@@ -104,9 +104,9 @@ public:
     int OFFSET_HIP_D = 190;
     int ANGLE_MIN_SHOULDER_D = -15;
     int ANGLE_MAX_SHOULDER_D = 165;
-    CustomServo SERVO_SHOULDER_D = CustomServo(26);
-    CustomServo SERVO_HIP_D = CustomServo(27);
-    CustomServo SERVO_KNEE_D = CustomServo(25);
+    CustomServo SERVO_SHOULDER_D = CustomServo(28);
+    CustomServo SERVO_HIP_D = CustomServo(30);
+    CustomServo SERVO_KNEE_D = CustomServo(31);
 
 private:
     int _leg_number;
