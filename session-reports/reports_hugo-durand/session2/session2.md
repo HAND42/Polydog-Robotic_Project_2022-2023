@@ -58,7 +58,7 @@ I have added the plateformio ecosystem to the github directory tree. I couldn't 
 <td align="center"> PolyDog.cpp --> </td>
 <td align="center"> Leg.cpp --> </td>
 <td align="center"> CustomServo.cpp  --></td>
-<td align="center"> Result --> </td>
+<td align="center"> Figure2.8_:_Polydog_standing_up  -->  </td>
 </tr>
 <tr>
 <td style=font-size:80% >
@@ -123,7 +123,7 @@ void CustomServo::move(int position, int time)
 ```
 
 </td>
-<td><img src="side_view_robot_standing_up.jpeg" style="width:400px;"/><figcaption>Figure2.8 : Polydog standing up</figcaption></td>
+<td><img src="side_view_robot_standing_up.jpeg" style="width:100%;"/></td>
 </tr>
 </table> 
 
