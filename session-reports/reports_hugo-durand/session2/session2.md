@@ -6,7 +6,7 @@
 
 ## Servo housing
 
-Last week I realised that under the effect of the torque, the servo motors move of their place and some screws loosen. So, in order to reduce the angular rotation inaccuracies and consequently the inaccuracies in the movement of the robot legs, I removed the space inside the cases in a new modelisation and print it. I recovered the printed servo casing during the weekend. I inserted a servo inside, it fits perfectly and the weight difference is very low.
+Last week I realised that under the effect of the torque, the servo motors move of their place and some screws loosen. So, in order to reduce the angular rotation inaccuracies and consequently the inaccuracies in the movement of the robot legs, I removed the space inside the cases in a new modelisation and print it. I recovered the printed servo casing during the weekend. I inserted a servo inside, it fits perfectly and the weight difference is very low.   
 
 |![Figure  2.1 : Current servo housing](current_housing_comparison.jpeg)|![Figure  2.2 : New servo housing printed](new_housing_fits.jpeg)|
 |:---:|:---:|
