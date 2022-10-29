@@ -1,6 +1,6 @@
 # SESSION OUTCOME REPORT
 ## Date: 14/10/2022
-## Main event of ther report: Learning to use an IMU 
+## Main event of the session: Learning to use an IMU 
 
 As you know, Balance is a major problem in our project (Polydog), this is why we decided to use an IMU in order to stabilize more the robot.  
  In this session, i learned to use the 10 DOF IMU Sensor. This IMU sensor measures and reports on a craft's velocity, orientation, and gravitational forces, using a combination of accelerometers ,gyroscopes, and magnetometers. For the moment, we are going to use the IMU to reports just on the Polydog orientation, but after we finish our robots, we might use it also to measure the Polydog's velocity.  

@@ -1,6 +1,6 @@
 # SESSION 2 OUTCOME REPORT
 ## Date: 18/10/2022
-## Main event of ther report: Fixing the IMU drift problem. 
+## Main event of the session: Fixing the IMU drift problem. 
 During the last session, i encountered a major problem which is the instability of the 10 DOF IMU sensor, but i finally found a solution for this issue after Mr.Masson gave me a course (that you can find in the file reports_younes-bazi) to read called "how to use an IMU for a self-balancing robot".This problem is common and it is called the IMU drift.  
 To understand the cause of an IMU drift we need to understand first how an IMU detects position. IMUs work by detecting rotational movement of the three-axis, commonly known as Pitch, Roll, and YAW. To achieve such, it relies on the functionality of Accelerometers, Gyroscopes, and Magnetometer.The IMU orientation is usually obtained by integrating the angular velocity measured
  with the gyroscope, This allows for an immediate detection of orientation changes but leads to a DRIFT of the estimated orientation over time. BUT WHY IT LEADS TO A DRIFT? well the answer is simple : In order to get rotation (angle) from a gyroscope, which senses angular velocity, you need to perform a single integration.  
