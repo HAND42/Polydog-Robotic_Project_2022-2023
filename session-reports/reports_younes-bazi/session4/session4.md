@@ -23,4 +23,5 @@ Now we need to combine the Body's Kinematics with the four Legs. Input will be t
 ![Alt text](Figure%202022-11-19%20000702.png)  
 We can now apply some random poses on the Robot's Body to verify the correctness of all Legs.  
 ![Alt text](Capture%20d%E2%80%99%C3%A9cran%202022-11-19%20001154.png)  
-![Alt text](Figure%202022-11-19%20001131.png)
+![Alt text](Figure%202022-11-19%20001131.png)  
+Now the calculations work, i will try next week to implement kinemactis on the arduino board , and try to do some poses on the real Polydog to see if it really works in real life.
