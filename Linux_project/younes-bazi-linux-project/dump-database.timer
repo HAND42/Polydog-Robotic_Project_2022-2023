@@ -1,0 +1,17 @@
+we create the timer using this command :  
+sudo touch /etc/systemd/system/dump-database.timer  
+
+we then start the Vi using this command :  
+sudo vi /etc/systemd/system/dump-database.timer  
+
+and finally we write this :  
+[Unit]  
+Description=Run backup every 10min  
+
+[Timer]  
+OnCalendar=*:0/10  
+AccuracySec=1s  
+Unit=dump-database.service  
+
+[Install]  
+WantedBy=timer.target  
