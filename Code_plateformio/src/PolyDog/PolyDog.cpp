@@ -180,8 +180,6 @@ void PolyDog::move_leg(int i)
     leg_list[i].move_knee(130);
     delay(200);
 
-    // legA.move_knee(100);
-
     leg_list[i].move_hip(50);
     leg_list[i].move_knee(140);
     delay(150);
