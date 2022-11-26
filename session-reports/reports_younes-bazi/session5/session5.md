@@ -6,7 +6,7 @@ During the first part of this session , we decided to use a remote controller wi
 ![Alt text](Session05/20221126_153014.jpg)  
 The intersting thing with the PS4 controller is that it has an internal gyroscope, so we are not going only to  control the robot with the 2 joysticks, but also we will be able to control it with the gyro-based motion controls.      
 In order to connect the PS4 controller with the arduino uno we need two components:    
-1) An USB 2.0 Host Shield that will be put right on the top of the Ardiono Uno and provides support for many USB devices. :  
+1) An USB 2.0 Host Shield that will be put right on the top of the Arduino Uno and provides support for many USB devices. :  
 ![Alt text](Session05/s-l500.jpg)  
 2) An USB Bluetooth dongle (adapter) that after being plugged into the USB 2.0 host shield will transmits and receives Bluetooth wireless signals:  
  ![Alt text](Session05/shopping.webp)        
