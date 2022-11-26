@@ -8,7 +8,7 @@ The intersting thing with the PS4 controller is that it has an internal gyroscop
 In order to connect the PS4 controller with the arduino uno we need two components:    
 1) An USB 2.0 Host Shield that will be put right on the top of the Ardiono Uno and provides support for many USB devices. :  
 ![Alt text](Session05/s-l500.jpg)  
-2) An USB Bluetooth dongle (adapter) that after being plugged into the USB 2.0 host shield will transmits and receives Bluetooth wireless signals :
+2) An USB Bluetooth dongle (adapter) that after being plugged into the USB 2.0 host shield will transmits and receives Bluetooth wireless signals:  
  ![Alt text](Session05/shopping.webp)        
 
 Unfortunately, we couldn't use the PS4 controller because we had only the USB 2.0 host shield and not the USB Bluetooth dongle, so the Professor Pascal Masson decided to give us a wired controller wich is the PS2 controller that it plugs directly into the arduino uno board by following the plan below :  
