@@ -41,8 +41,8 @@ void PolyDog::start()
 {
     for (int i = 0; i < 4; i++)
     {
-        leg_list[i].move_hip(70);
-        leg_list[i].move_knee(140);
+        leg_list[i].move_hip(90);
+        leg_list[i].move_knee(90);
         delay(100);
     }
 
@@ -78,6 +78,29 @@ void PolyDog::hold_shoulders()
     legD.move_shoulder(90);
 }
 
+void PolyDog::placing_legs()
+{
+    for (int i = 0; i < 4; i++)
+    {
+        leg_list[i].move_hip(90);
+        leg_list[i].move_knee(90);
+    }
+    this->hold_shoulders();
+}
+
+void PolyDog::range_motion_hip()
+{
+    for (int i = 0; i < 4; i++)
+    {
+        leg_list[i].move_hip(70);
+    }
+    delay(1000);
+    for (int i = 0; i < 4; i++)
+    {
+        leg_list[i].move_hip(110);
+    }
+    delay(1000);
+}
 /**
  * This method moves the robot body from left to right using only his shoulders.
  * If placed in a loop, it creates a nice waiting animation.
@@ -116,6 +139,20 @@ void PolyDog::self_balancing()
     }
 }
 
+void PolyDog::walk(){
+    this->move_leg2(1);
+    this->move_leg2(3);
+    this->move_leg(0);
+    this->move_leg(2);
+    delay(500);
+    this->move_leg(1);
+    this->move_leg(3);
+    this->move_leg2(0);
+    this->move_leg2(2);
+    delay(500);
+
+}
+
 /**
  * This method moves only the leg A up and down once.
  * If placed in a loop, it creates a nice excitement like animation.
@@ -140,49 +177,40 @@ void PolyDog::excitement()
     delay(150);
 }
 
-// ============== PLAYGROUND ============= //
-
-/** BACKUUUUUUUP
-     // <-- STEP TWO : LEG D STARTS ---> //
-    legD.move_knee(100);
-    delay(100);
-    legD.move_hip(100);
-    delay(200);
-    legD.move_knee(130);
-    delay(200);
-
-    // BRING LEG D BACK TO START POINT
-    // START LEG A
-    legA.move_knee(100);
-
-    legD.move_hip(50);
-    legD.move_knee(140);
-    delay(150);
-
-    // <-- STEP BLALBLAA : LEG D STARTS ---> //
-    legA.move_hip(100);
-    delay(150);
-    legA.move_knee(130);
-    delay(150);
-
-    // BRING LEG D BACK TO START POINT
-    legA.move_hip(50);
-    legA.move_knee(140);
-
- */
+void PolyDog::raise_leg(int i)
+{
+    leg_list[i].move_knee(135);
+    leg_list[i].move_hip(90);
+    delay(1000);
+    // leg_list[i].move_knee(140);
+    // leg_list[i].move_hip(100);
+    // delay(700);
+    // leg_list[i].move_knee(114);
+    // leg_list[i].move_hip(100);
+    // delay(700);
+    // leg_list[i].move_knee(160);
+    // leg_list[i].move_hip(100);
+    // delay(700);
+    this->start();
+    delay(1000);
+}
 
 void PolyDog::move_leg(int i)
 {
-    leg_list[i].move_knee(100);
-    delay(100);
-    leg_list[i].move_hip(100);
-    delay(200);
-    leg_list[i].move_knee(130);
-    delay(200);
-
-    leg_list[i].move_hip(50);
+    delay(500);
     leg_list[i].move_knee(140);
-    delay(150);
+    delay(500);
+    leg_list[i].move_hip(100);
+    delay(500);
+    // leg_list[i].move_knee(100);
+    // leg_list[i].move_hip(100);
+    // delay(500);
+}
+
+void PolyDog::move_leg2(int i)
+{
+    leg_list[i].move_knee(130);
+    leg_list[i].move_hip(100);
 }
 
 /**
@@ -423,35 +451,7 @@ void PolyDog::move_left()
     delay(100);
 }
 
-void PolyDog::sweep_every_servo()
-{
-    legA.move_hip(180);
-    legB.move_hip(180);
-    legC.move_hip(180);
-    legD.move_hip(180);
-    legA.move_knee(180);
-    legB.move_knee(180);
-    legC.move_knee(180);
-    legD.move_knee(180);
-    legA.move_shoulder(180);
-    legB.move_shoulder(180);
-    legC.move_shoulder(180);
-    legD.move_shoulder(180);
-    delay(2000);
-    legA.move_hip(0);
-    legB.move_hip(0);
-    legC.move_hip(0);
-    legD.move_hip(0);
-    legA.move_shoulder(0);
-    legB.move_shoulder(0);
-    legC.move_shoulder(0);
-    legD.move_shoulder(0);
-    legA.move_knee(0);
-    legB.move_knee(0);
-    legC.move_knee(0);
-    legD.move_knee(0);
-    delay(2000);
-}
+
 
 void PolyDog::middle_every_servo()
 {

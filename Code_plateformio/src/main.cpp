@@ -16,7 +16,7 @@
 #include "PolyDog/PolyDog.h"
 #include "CustomServo/CustomServo.h"
 #include "Leg/Leg.h"
-#include <IRremote.h>
+//#include <IRremote.h>
 #include <Pixy2.h>
 #include <PIDLoop.h>
 
@@ -29,8 +29,8 @@ PolyDog dog = PolyDog();
 
 int IrReceiverPin = 8;
 
-IRrecv IRreceiver(IrReceiverPin);
-decode_results results;
+// IRrecv IRreceiver(IrReceiverPin);
+// decode_results results;
 
 int remote_choice = 0; // Default choice : robot is standing and not moving
 // ------ END OF INITIALIZATION ------
@@ -111,13 +111,20 @@ int getRemoteChoice(uint32_t results)
  */
 void setup()
 {
+    
+    Serial.begin(115200);
     dog.start();
-    Serial.begin(9600);
-    IRreceiver.enableIRIn();
-    Serial.println("Begin");
-
-    pixy.init();
-    pixy.changeProg("color_connected_components");
+    delay(2000);
+    // dog.move_leg(0);
+    // dog.move_leg2(1);
+    // IRreceiver.enableIRIn();
+    // Serial.println("Begin");
+    // Serial.println("#29P1500T0");
+    // Serial.println("#19P1500T0");
+    // Serial.println("#13P1500T0");
+    // Serial.println("#3P1500T0");
+    // pixy.init();
+    // pixy.changeProg("color_connected_components");
 }
 
 /**
@@ -126,95 +133,101 @@ void setup()
  */
 void loop()
 {
+    
+    // dog.raise_leg(3);
+    // dog.raise_leg(2);
+    //dog.raise_leg(1);
+    //dog.start();
+    
+}
 
-    //   Serial.println("#32P2000T0");
-    //    dog.control_with_potentio();
+//     //    dog.control_with_potentio();
 
-    // remote_choice = getRemoteChoice(IrReceiver.decodedIRData.decodedRawData);
+//     // remote_choice = getRemoteChoice(IrReceiver.decodedIRData.decodedRawData);
 
-    // delay(100);
+//     // delay(100);
 
-    if (IRreceiver.decode(&results))
-    {
-        IRreceiver.resume();
-        uint32_t hex = uint32_t(results.value);
-        Serial.print("Hexadecimal Code: ");
-        Serial.println(hex);
-        remote_choice = getRemoteChoice(hex);
-        Serial.println(remote_choice);
-    };
+//     // if (IRreceiver.decode(&results))
+//     // {
+//     //     IRreceiver.resume();
+//     //     uint32_t hex = uint32_t(results.value);
+//     //     Serial.print("Hexadecimal Code: ");
+//     //     Serial.println(hex);
+//     //     remote_choice = getRemoteChoice(hex);
+//     //     Serial.println(remote_choice);
+//     // };
 
-    switch (remote_choice)
-    {
-    case 0: // button 0
-            // Camera mode : the dog is following an object
-        dog.start();
-        // int32_t panOffset, tiltOffset;
+//     switch (remote_choice)
+//     {
+//     case 0: // button 0
+//             // Camera mode : the dog is following an object
+//         dog.start();
+//         // int32_t panOffset, tiltOffset;
 
-        // get active blocks from Pixy
-        // pixy.ccc.getBlocks();
+//         // get active blocks from Pixy
+//         // pixy.ccc.getBlocks();
 
-        // if (pixy.ccc.numBlocks)
-        //{
+//         // if (pixy.ccc.numBlocks)
+//         //{
 
-        // calculate pan and tilt "errors" with respect to first object (blocks[0]),
-        // which is the biggest object (they are sorted by size).
-        // panOffset = (int32_t)pixy.frameWidth / 2 - (int32_t)pixy.ccc.blocks[0].m_x;
-        // tiltOffset = (int32_t)pixy.ccc.blocks[0].m_y - (int32_t)pixy.frameHeight / 2;
+//         // calculate pan and tilt "errors" with respect to first object (blocks[0]),
+//         // which is the biggest object (they are sorted by size).
+//         // panOffset = (int32_t)pixy.frameWidth / 2 - (int32_t)pixy.ccc.blocks[0].m_x;
+//         // tiltOffset = (int32_t)pixy.ccc.blocks[0].m_y - (int32_t)pixy.frameHeight / 2;
 
-        // update loops
-        // panLoop.update(panOffset);
-        // tiltLoop.update(tiltOffset);
+//         // update loops
+//         // panLoop.update(panOffset);
+//         // tiltLoop.update(tiltOffset);
 
-        // set pan and tilt servos
-        // pixy.setServos(panLoop.m_command, tiltLoop.m_command);
+//         // set pan and tilt servos
+//         // pixy.setServos(panLoop.m_command, tiltLoop.m_command);
 
-        // dog.move_forward();
-        //}
-        // else // no object detected, go into reset state
-        // {
-        //     panLoop.reset();
-        //     tiltLoop.reset();
-        //     pixy.setServos(panLoop.m_command, tiltLoop.m_command);
-        // }
+//         // dog.move_forward();
+//         //}
+//         // else // no object detected, go into reset state
+//         // {
+//         //     panLoop.reset();
+//         //     tiltLoop.reset();
+//         //     pixy.setServos(panLoop.m_command, tiltLoop.m_command);
+//         // }
 
-        break;
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-        break;
-    case 10: // * button
-        // The robot is in a waiting movement, juste like a game player waiting
-        dog.self_balancing();
-        break;
-    case 11: // # button
-        // The robot is doing a little excitement thing
-        dog.excitement();
-        break;
-    case 12: // UP button
-        // The robot is going forward
-        dog.move_forward();
-        break;
-    case 13: // RIGHT button
-        // The robot is going to the right
-        dog.move_right();
-        break;
-    case 14: // DOWN button
-        // The robot is going backward
-        break;
-    case 15: // LEFT button
-        // The robot is going to the left
-        dog.move_left();
-        break;
-    case 16: // OK button
-        // ROBOT IS STATIC
-        dog.start();
-        break;
-    };
-};
+//         break;
+//     case 1:
+//     case 2:
+//     case 3:
+//     case 4:
+//     case 5:
+//     case 6:
+//     case 7:
+//     case 8:
+//     case 9:
+//         break;
+//     case 10: // * button
+//         // The robot is in a waiting movement, juste like a game player waiting
+//         dog.self_balancing();
+//         break;
+//     case 11: // # button
+//         // The robot is doing a little excitement thing
+//         dog.excitement();
+//         break;
+//     case 12: // UP button
+//         // The robot is going forward
+//         dog.move_forward();
+//         break;
+//     case 13: // RIGHT button
+//         // The robot is going to the right
+//         dog.move_right();
+//         break;
+//     case 14: // DOWN button
+//         // The robot is going backward
+//         break;
+//     case 15: // LEFT button
+//         // The robot is going to the left
+//         dog.move_left();
+//         break;
+//     case 16: // OK button
+//         // ROBOT IS STATIC
+//         dog.start();
+//         break;
+//     };
+// };

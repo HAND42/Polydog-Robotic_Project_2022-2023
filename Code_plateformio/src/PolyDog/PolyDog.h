@@ -64,6 +64,8 @@ public:
      *
      * @author DURAND Hugo
      */
+    void walk();
+
     void hold_hip_knee();
     /**
      * This method place the shoulder in a position where all legs are perpendicular to the ground.
@@ -71,6 +73,8 @@ public:
      * @author ANJOU Raphael
      */
     void hold_shoulders();
+    void placing_legs();
+    void range_motion_hip();
 
     /**
      * This method moves the robot body from left to right using only his shoulders.
@@ -117,11 +121,11 @@ public:
     /**
      * @brief TO COMMENT
      */
-    void sweep_every_servo();
     void middle_every_servo();
     void control_with_potentio();
-
+    void raise_leg(int i);
     void move_leg(int i);
+    void move_leg2(int i);
 
     Leg legA;
     Leg legB;
