@@ -1,6 +1,6 @@
 # SESSION 7 OUTCOME REPORT
 ## Date: 9/12/2022
-## Main event of the session: The configuration of the Esplora arduino controller and its communication with the arduino mega via  Bluetooth.  
+## Main event of the session: The configuration of the Esplora arduino controller and its communication with the arduino mega via  Bluetooth (Part 1).  
 During this session, i managed to connect the Esplora conntroller to arduino mega via bluetooth, but before initiating the communication via bluetooth, we should program the esplora controler by uploading the code to its microcontroller. The code i uploaded was just a test, I just asked the serial monitor to show me the value 1 if the switch 1 of the esplora controler is not pressed , and the value 0 if the switch 1 is pressed , i used this code:  
 `#include <Esplora.h>`  
 `void setup()`  
