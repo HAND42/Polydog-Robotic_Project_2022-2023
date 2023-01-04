@@ -37,7 +37,7 @@ CustomServo::CustomServo(int pin)
  */
 void CustomServo::write(int angle)
 {
-  move(map(angle, 0, 180, 500, 2500), 10);
+  move(map(angle, 0, 180, 500, 2500), 0);
 }
 
 /**
@@ -55,5 +55,4 @@ void CustomServo::move(int position, int time)
   Serial.print(position);
   Serial.print(" T");
   Serial.println(time);
-  delay(time);
 }

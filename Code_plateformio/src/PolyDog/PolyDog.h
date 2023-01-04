@@ -52,19 +52,21 @@ public:
      * @author ANJOU Raphael
      */
     PolyDog();
-
     /**
      * This method places the robot in an upright stable position.
      *
      * @author ANJOU Raphael
      */
-    void start();
+    void stand_up();
+    void stand_up2();
+    void stand_up3();
     /**
      * This method places the robot in an upright stable position.
      *
      * @author DURAND Hugo
      */
-    void walk();
+    void trot_walk();
+    void trot_walk2();
 
     void hold_hip_knee();
     /**
@@ -75,6 +77,7 @@ public:
     void hold_shoulders();
     void placing_legs();
     void range_motion_hip();
+    void range_motion_knee();
 
     /**
      * This method moves the robot body from left to right using only his shoulders.
@@ -82,15 +85,8 @@ public:
      *
      * @author DURAND Hugo
      */
-    void self_balancing();
+    void range_motion_shoulder();
 
-    /**
-     * This methods moves only the leg A up and down once.
-     * If placed in a loop, it creates a nice excitement like animation.
-     *
-     * @authors ANJOU Raphael & DURAND Hugo
-     */
-    void excitement();
 
     /**
      * This methods moves the robot one step forward.
@@ -123,9 +119,9 @@ public:
      */
     void middle_every_servo();
     void control_with_potentio();
-    void raise_leg(int i);
+    void raise_leg();
     void move_leg(int i);
-    void move_leg2(int i);
+    void move_2leg(int i, int j);
 
     Leg legA;
     Leg legB;

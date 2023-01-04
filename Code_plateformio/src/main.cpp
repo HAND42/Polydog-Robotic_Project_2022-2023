@@ -113,7 +113,7 @@ void setup()
 {
     
     Serial.begin(115200);
-    dog.start();
+    dog.stand_up();
     delay(2000);
     // dog.move_leg(0);
     // dog.move_leg2(1);
@@ -133,11 +133,16 @@ void setup()
  */
 void loop()
 {
+    // dog.stand_up();
+    // delay(500);
+    // dog.move_2leg(3,6);
+    // delay(500);
+    dog.range_motion_knee();
     
     // dog.raise_leg(3);
     // dog.raise_leg(2);
-    //dog.raise_leg(1);
-    //dog.start();
+    //dog.range_motion_knee();
+
     
 }
 
