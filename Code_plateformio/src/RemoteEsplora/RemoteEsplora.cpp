@@ -34,6 +34,11 @@ void RemoteEsplora::begin(long speed) {
     delay(100);
 }
 
+/*
+*As the name of the function indicates, we get the values of the joysticks and buttons of the remote control *
+* to be able to use them to move the robot.
+*/
+
 void RemoteEsplora::RemoteInstruction(PolyDog dog){ 
     
     if (Serial3.available()>= 9) {
