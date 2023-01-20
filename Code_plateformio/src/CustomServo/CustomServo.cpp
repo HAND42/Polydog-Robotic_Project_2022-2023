@@ -41,7 +41,9 @@ void CustomServo::write(int angle)
 }
 
 /**
- * This method manages the serial communication to move a servo motor.
+ * This method manages the serial communication to move a servo motor. 
+ * The command accepted by the ssc32 board to rotate the servo motor 42 by a "teta" angle between 500 and 2500 in "temps" milliseconds :
+ * #42PtetaTtemps
  *
  * @param position the value between 500 and 2500 equivalent to an angle between 0 and 180
  * @param time the duration that the servo needs to respect when moving between current and final positions

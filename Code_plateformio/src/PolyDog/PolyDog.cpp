@@ -30,11 +30,7 @@ PolyDog::PolyDog() : legA(1), legB(2), legC(3), legD(4)
 
 
 /**
- * This method start the robot standing up on its feet.
- * <p>
- * There are no delays in this methods. It might be necessary to put some delay after executing it if the shoulders
- * need to move right after.
- * <p>
+ * This method start the robot standing up on its feet. The position allows the rear leg to be raised while keeping the robot stable.
  * The algorithm consists in placing the hip and the knee motors in a stable position.
  *
  * @author ANJOU Raphael
@@ -44,11 +40,16 @@ void PolyDog::stand_up()
     for (int i = 0; i < 4; i++)
     {
         leg_list[i].move_hip(115); 
-        leg_list[i].move_knee(65);
+        leg_list[i].move_knee(55);
     }
 
     this->hold_shoulders();
 }
+/**
+ * This method start the robot standing up on its feet. 
+ * The position allows the front leg to be raised while keeping the robot stable. 
+ * @author DURAND Hugo
+ */
 void PolyDog::stand_up2()
 {
     for (int i = 0; i < 4; i++)
@@ -60,6 +61,22 @@ void PolyDog::stand_up2()
     this->hold_shoulders(); 
 }
 void PolyDog::stand_up3()
+{
+    for (int i = 0; i < 4; i++)
+    {
+        leg_list[i].move_hip(110); 
+        leg_list[i].move_knee(73);
+    }
+
+    this->hold_shoulders(); 
+}
+
+/**
+ * This method start the robot standing up on its feet. We have recovered two positions in which the robot is at the same height. 
+ * We have drawn a linear function on excel to implement here. 
+ * @author DURAND Hugo
+ */
+void PolyDog::stand_up4()
 {
     int hip=90;
     for (int i = 0; i < 15; i++)
@@ -95,15 +112,35 @@ void PolyDog::stand_up3()
      this->hold_shoulders(); 
 
 }
+/**
+ * By retrieving the value of the accelerometer of the Esplora remote control,
+ * The robot is oriented according to the inclination of the joystick.
+ *
+ * @author DURAND Hugo
+ */
+void PolyDog::orientation(int AccX, int AccY){
+
+    int angle_accx = (((AccX-130)+5)/10)*4;
+    int angle_accy = (AccY-125)/4;
+    legA.move_shoulder(90 -angle_accx);
+    legB.move_shoulder(90 +angle_accx);
+    legC.move_shoulder(90 +angle_accx);
+    legD.move_shoulder(90 -angle_accx);
+
+    legA.move_knee(73 -angle_accy);
+    legB.move_knee(73 -angle_accy);
+
+    legC.move_knee(73 +angle_accy);
+    legD.move_knee(73 +angle_accy); 
+    
+
+}
 
 
 /**
  * This method place the shoulder in a position where all legs are perpendicular to the ground.
- * <p>
- * There are no delays in this methods. It might be necessary to put some delay after executing it if the shoulders
- * need to move right after.
- * <p>
  * The algorithm consists in placing all shoulder motors at a 90 degrees angle.
+ * Otherwise when we place the legs, there will be legs inverted with the others.
  *
  * @author ANJOU Raphael
  */
@@ -120,13 +157,12 @@ void PolyDog::hold_shoulders()
     legD.move_shoulder(90);
 }
 
-
 /**
  * Execution of this method when placing the legs on the servo motor heads. 
  * <p>
  * The placement is arbitrary. However, we have positioned the legs to optimize the servo's range of motion. 
  * <p>
- * The algorithm consists in placing all hip and knee motors at a 90 degrees angle.
+ * The algorithm consists in placing all hip and knee motors at a 90 degrees angle. It is useful while we screw the legs to the body.
  *
  * @author DURAND Hugo
  */
@@ -152,12 +188,14 @@ void PolyDog::placing_legs()
  */
 void PolyDog::range_motion_hip()
 {
+        legA.move_hip(95);
+        legB.move_hip(95);
+        legC.move_hip(95);
+        legD.move_hip(95);
+        delay(100);
     for (int i = 0; i < 40; i++)
     {
-        legA.move_knee(70 + i);
-        legB.move_knee(70 + i);
-        legC.move_knee(70 + i);
-        legD.move_knee(70 + i);
+
         legA.move_hip(95 + i);
         legB.move_hip(95 + i);
         legC.move_hip(95 + i);
@@ -251,6 +289,7 @@ void PolyDog::range_motion_shoulder()
     }
 }
 
+
 void PolyDog::trot_walk()
 {
     leg_list[0].move_knee(125);
@@ -261,18 +300,18 @@ void PolyDog::trot_walk()
     leg_list[1].move_knee(65);
     leg_list[3].move_hip(115);
     leg_list[3].move_knee(65);
-    delay(300);
+    delay(200);
     leg_list[0].move_knee(125);
     leg_list[0].move_hip(90);
     leg_list[2].move_knee(125);
     leg_list[2].move_hip(90);
-    delay(300);
+    delay(200);
     leg_list[0].move_knee(100);
-    leg_list[0].move_hip(90);
+    leg_list[0].move_hip(88);
     leg_list[2].move_knee(100);
-    leg_list[2].move_hip(90);
+    leg_list[2].move_hip(88);
   
-    delay(300);
+    delay(200);
 
     leg_list[0].move_hip(115);
     leg_list[0].move_knee(65);
@@ -284,17 +323,17 @@ void PolyDog::trot_walk()
     leg_list[3].move_knee(125);
     leg_list[3].move_hip(115);
 
-    delay(300);
+    delay(200);
     leg_list[1].move_knee(125);
     leg_list[1].move_hip(90);
     leg_list[3].move_knee(125);
     leg_list[3].move_hip(90);
-    delay(300);
+    delay(200);
     leg_list[1].move_knee(100);
-    leg_list[1].move_hip(90);
+    leg_list[1].move_hip(88);
     leg_list[3].move_knee(100);
-    leg_list[3].move_hip(90);
-    delay(300);
+    leg_list[3].move_hip(88);
+    delay(200);
 }
 
 void PolyDog::trot_walk2()
@@ -335,10 +374,10 @@ void PolyDog::trot_walk2()
 
 void PolyDog::move_leg(int i)
 {
-    leg_list[i].move_knee(125);
+    leg_list[i].move_knee(115);
     leg_list[i].move_hip(115);
     delay(500);
-    leg_list[i].move_knee(125);
+    leg_list[i].move_knee(115);
     leg_list[i].move_hip(90);
     delay(500);
     leg_list[i].move_knee(100);
@@ -353,100 +392,6 @@ void PolyDog::move_2leg(int i, int j){
     leg_list[i].move_hip(115);
     leg_list[j].move_knee(90);
 
-}
-
-/**
- * This methods moves the robot one step forward.
- * If placed in a loop, the robot appears to be walking smoothly.
- * <p>
- * This method takes a minimum of 1300ms to execute due to 13 delays of 100ms.
- * <p>
- * The algorithm consists in moving each foot forward a little bit. When all of them are forward be make each leg come
- * back to their starting position.
- *
- * @author ANJOU Raphael & DURAND Hugo
- */
-void PolyDog::move_forward()
-{
-    // To make sure that all legs are perpendicular to the ground
-    hold_shoulders();
-
-    // START POSITION LEG : HIP = 40 | KNEE = 140
-
-    /**
-    // <-- STEP ONE : LEG B STARTS ---> //
-    legB.move_knee(100);
-    legB.move_hip(100);
-    delay(300);
-    legB.move_knee(130);
-    delay(300);**/
-
-    // <-- STEP TWO : LEG D STARTS ---> //
-    legD.move_knee(100);
-    legB.move_knee(100);
-    delay(100);
-    legD.move_hip(100);
-    legB.move_hip(100);
-    delay(200);
-    legD.move_knee(130);
-    legB.move_knee(130);
-    delay(200);
-
-    // BRING LEG D BACK TO START POINT
-    // START LEG A
-    legA.move_knee(100);
-    legC.move_knee(100);
-
-    legD.move_hip(50);
-    legB.move_hip(50);
-    legD.move_knee(140);
-    legB.move_knee(140);
-    delay(150);
-
-    // <-- STEP BLALBLAA : LEG D STARTS ---> //
-    legA.move_hip(100);
-    legC.move_hip(100);
-    delay(150);
-    legA.move_knee(130);
-    legC.move_knee(130);
-    delay(150);
-
-    // BRING LEG D BACK TO START POINT
-    legA.move_hip(50);
-    legC.move_hip(50);
-    legA.move_knee(140);
-    legC.move_knee(140);
-
-    /**
-    // <-- STEP THREE: B&D MOVES BACKWARD while A&C MOVES FORWARD ---> //
-    // BRING LEG B BACK TO START POINT
-    legB.move_hip(50);
-    legB.move_knee(140);
-    // BRING LEG D BACK TO START POINT
-    legD.move_hip(50);
-    legD.move_knee(140);
-    // BRING LEG A TO THE BACK
-    legA.move_hip(60);
-    legA.move_knee(145);
-    // BRING LEG C TO THE BACK
-    legC.move_hip(60);
-    legC.move_knee(145);
-    delay(300);
-
-    // <-- STEP FOUR : MOVE LEG A FORWARD TO THE DEFAULT POSITION ---> //
-    legA.move_knee(100);
-    delay(300);
-    legA.move_knee(140);
-    legA.move_hip(50);
-    delay(300);
-
-    // <-- STEP FIVE : MOVE LEG C FORWARD TO THE DEFAULT POSITION ---> //
-    legC.move_knee(100);
-    delay(300);
-    legC.move_knee(140);
-    legC.move_hip(50);
-    **/
-    // delay(1000);
 }
 
 /**
@@ -593,79 +538,3 @@ void PolyDog::move_left()
     delay(100);
 }
 
-
-
-void PolyDog::middle_every_servo()
-{
-    for (int i = 0; i < 4; i++)
-    {
-        leg_list[i].move_hip(90);
-        leg_list[i].move_knee(90);
-        leg_list[i].move_shoulder(90);
-        delay(15);
-    }
-    delay(2000);
-}
-
-void PolyDog::control_with_potentio()
-{
-    int val_knee;
-    int val_hip;
-
-    /**
-     * @brief Those values are read from two potentiometers.
-     * The values are also read by another arduino so that I can display the
-     * exact value of each potentiometer. I'm using the Arduino software for
-     * this Arduino.
-     *
-     */
-    val_knee = analogRead(A0);
-    val_knee = map(val_knee, 0, 1023, 0, 180);
-
-    val_hip = analogRead(A2);
-    val_hip = map(val_hip, 0, 1023, 0, 180);
-
-    /**
-     * @brief This loop is used to test only one leg (knee and hip) at a time
-     * while the other are set on the basic position (90 degrees).
-     *
-     */
-    for (int i = 0; i < 4; i++)
-    {
-        leg_list[i].move_shoulder(90); // Removed when fixing the shoulders
-
-        if (i != 1)
-        {
-            leg_list[i].move_knee(90);
-            leg_list[i].move_hip(90);
-        }
-        else
-        {
-            // leg_list[i].move_knee(90, -val_knee);
-            // leg_list[i].move_hip(90, -val_hip);
-
-            leg_list[i].move_knee(val_knee);
-            leg_list[i].move_hip(val_hip);
-        }
-    }
-    delay(20);
-
-    /**
-     * @brief This loop is used to test the shoulder of each leg while the other
-     * are still held at the basic position (180 degrees).
-     *
-     */
-
-    /**
-    for (int i = 0; i < 4; i++)
-    {
-        if (i == 4)
-        {
-            leg_list[i].move_shoulder(180);
-        }
-        else
-        {
-            leg_list[i].move_shoulder(val_hip);
-        }
-    }**/
-}
