@@ -2,8 +2,8 @@ from mpl_toolkits import mplot3d
 import numpy as np
 from math import *
 import matplotlib.pyplot as plt
-
-def setupView(limit):
+#setting up a 3D plot with limits and labels for the x, y, and z axes
+def setupView(limit):               
     ax = plt.axes(projection="3d")
     ax.set_xlim(-limit, limit)
     ax.set_ylim(-limit, limit)
@@ -13,30 +13,30 @@ def setupView(limit):
     ax.set_zlabel("Y")
     return ax
 setupView(200).view_init(elev=12., azim=28)
-
+#The rotation angles
 omega =  pi/4
 phi =0
 psi = 0
-
+#The Center of the Body
 xm = 0
 ym = 0
 zm = 0
-
+#The length of the Leg's Segments
 l1=25
 l2=20
 l3=80
 l4=80
-
+#Body measurements
 L = 120
 W = 90
-
+#
 Lp=np.array([[100,-100,100,1],[100,-100,-100,1],[-100,-100,100,1],[-100,-100,-100,1]])
 
 sHp=np.sin(pi/2)
 cHp=np.cos(pi/2)
 
 Lo=np.array([0,0,0,1])
-
+#To be able to calculate a Leg's Pose, we need to know where it starts when the Body has a specific Pose. The Pose is defined by omega,phi and psi - the rotation angles - and xm,ym and zm - the Center of the Body.
 def bodyIK(omega,phi,psi,xm,ym,zm):
     Rx = np.array([[1,0,0,0],
                    [0,np.cos(omega),-np.sin(omega),0],
@@ -56,7 +56,7 @@ def bodyIK(omega,phi,psi,xm,ym,zm):
            Tm @ np.array([[cHp,0,sHp,-L/2],[0,1,0,0],[-sHp,0,cHp,W/2],[0,0,0,1]]),
            Tm @ np.array([[cHp,0,sHp,-L/2],[0,1,0,0],[-sHp,0,cHp,-W/2],[0,0,0,1]])
            ])
-
+#We solve the Leg's Inverse Kinematics and calculate (theta1,theta2,theta3) - our output-angles - for a given Foot-Position (x,y,z) in Leg-Space.
 def legIK(point):
     (x,y,z)=(point[0],point[1],point[2])
     F=sqrt(x**2+y**2-l1**2)
@@ -92,7 +92,7 @@ def drawLegPair(Tl,Tr,Ll,Lr):
     Ix=np.array([[-1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]])
     drawLegPoints([Tl@x for x in calcLegPoints(legIK(np.linalg.inv(Tl)@Ll))])
     drawLegPoints([Tr@Ix@x for x in calcLegPoints(legIK(Ix@np.linalg.inv(Tr)@Lr))])
-
+#Now we combine the Body's Kinematics with the four Legs. Input will be the Body-Pose (omega,phi,psi,xm,ym,zm) and Positions for all four Legs in World-Space (Lp).
 def drawRobot(Lp,angles,center):
     (omega,phi,psi)=angles
     (xm,ym,zm)=center
