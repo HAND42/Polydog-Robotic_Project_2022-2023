@@ -1,5 +1,5 @@
 # SESSION 9 OUTCOME REPORT
-## Date: 21/01/2022
+## Date: 16/01/2022
 ## Main event of the session: Progress in the code of Inverse Kinematics.  
 The session began with a presentation given by my partner Hugo and me , in which we explained to our professors our progress and accomplishments during the first semester. The presentation covered the goals we set at the beginning of the semester, the methods and techniques we used to achieve them, and the results we obtained. Our professors provided feedback and suggestions for improvement. Following the presentation, the rest of the session was spent working on the inverse kinematic code:  
 `void kinematics (int leg, float x, float y, float z) {`  
