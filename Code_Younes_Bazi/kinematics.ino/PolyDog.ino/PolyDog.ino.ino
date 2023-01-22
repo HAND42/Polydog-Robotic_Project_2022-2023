@@ -286,7 +286,7 @@ void loop() {
  
         // send data to kinematic model function, compliance engine, and eventually write out to servos
         
-        kinematics (1,x,y);   // front left leg
+        kinematics (1,x,y,z);   // front left leg
         kinematics (2,x,y,z);   // front right leg
         kinematics (3,x,y,z);   // back left leg
         kinematics (4,x,y,z);   // back right leg

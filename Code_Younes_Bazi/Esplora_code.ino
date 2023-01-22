@@ -6,7 +6,7 @@ Serial1.begin(38400);
 }
 void loop()
 {
-
+//Read the Values from the esplora controller.
 int a=Esplora.readButton(1);
 int b=Esplora.readButton(2);
 int c=Esplora.readButton(4);
@@ -24,6 +24,7 @@ int h=map(f,-512,+512,0,+254);
 h=constrain(h,0,254);
 int i=map(g,-512,+512,0,+254);
 i=constrain(i,0,254);
+//print the values in the serial monitor
 Serial.print("AccX= ");
 Serial.print(X_axis);
 Serial.print("\tAccY= ");
@@ -43,6 +44,7 @@ Serial.print(c);
 Serial.print("\tJoybutton= ");
 Serial.println(e);
 delay(100);
+//Send the information to the Bluetooth module hc05 via serial pin 1.
 Serial1.write(X_axis);
 Serial1.write(Y_axis);
 Serial1.write(h);
