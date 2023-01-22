@@ -29,7 +29,7 @@ l4=80
 #Body measurements
 L = 120
 W = 90
-#
+#Positions for all four Legs in World-Space
 Lp=np.array([[100,-100,100,1],[100,-100,-100,1],[-100,-100,100,1],[-100,-100,-100,1]])
 
 sHp=np.sin(pi/2)
