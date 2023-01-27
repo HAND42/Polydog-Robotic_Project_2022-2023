@@ -1,0 +1,40 @@
+# Accelerometer  
+This code is used to read the accelerometer data from a 10 DOF IMU sensor. The sensor used in this code is the ADXL345, which communicates via I2C protocol.  
+We started by defining the variables to hold the outputs, roll, pitch, rollF, pitchF and the sensor's I2C address. In the setup function, the code initiates the serial communication and the wire library, then it configures the sensor to measuring mode by writing to the POWER_CTL register, we also did an offset calibration for the X,Y,Z-axis.  
+In the loop function, the code reads the accelerometer data by starting a transmission to the sensor's address and writing to the ACCEL_XOUT_H register, then requesting 6 bytes of data, which represent the X, Y, Z values. Each axis value is stored in two registers, so the code reads two bytes for each axis and shifts the second byte 8 bits to the left to get the complete value. Then it divides the raw values by 256, to get the value in the range of +-2g according to the sensor's datasheet.  
+Then it uses the atan function to calculate the roll and pitch angles, roll is the rotation around the X-axis and pitch is the rotation around the Y-axis. The code also applies a low-pass filter to the roll and pitch values by using a weighted average of the previous value and the current value.  
+Finally, it prints the filtered roll and pitch values to the serial monitor. 
+Please note that we used the 10 DOF IMU sensor and we wrote this code as the foundation for implementing stabilization through the application of PID control.  
+# 3D visualization of the accelerometer.    
+This code is used to create a 3D visualization of the accelerometer's orientation using a software called Processing 4. The code uses the Processing library to create a 3D object and rotate it according to the roll and pitch values received through the serial port.  
+We start by importing the necessary libraries, processing.serial and java.awt.event.KeyEvent, and java.io.IOException. Then we define the variables for the serial communication, a string variable to hold the data received from the serial port, and two float variables for the roll and pitch values.  
+In the setup function, the code sets the size of the window, initiates the serial communication, and specifies the serial port name and baud rate.  
+In the draw function, the code sets the translation and background, then it displays the roll and pitch values on the screen. Then it rotates the 3D object according to the roll and pitch values, using the rotateX and rotateZ functions, and then it draws the 3D object (a box) with the label "POLYDOG" on it.  
+The serialEvent function is called whenever new data is received through the serial port. It reads the data up to the newline character and assigns it to the "data" variable. Then it uses the split function to separate the roll and pitch values, which are received in the format "roll/pitch", and assigns them to the corresponding variables.  
+You can see the results in the video inside the Processing 4 file.  
+# Esplora and Hc05 Bluetooth module (Master)   
+This code is used to program an Esplora Arduino controller and send the values of the switches, joysticks, and accelerometer to a Bluetooth module (HC-05). The data is then received wirelessly by another Bluetooth module (HC-06) connected to an Arduino board.    
+We began by including the Esplora library and initializing the serial communication in the setup() function. The baud rate is set to 38400.  
+In the loop() function, the code reads the values of the buttons, joystick, and accelerometer from the Esplora controller using the Esplora library's functions. The data is then mapped to a range of 0-254, which is the range supported by the Bluetooth module.  
+The data is then printed on the serial monitor and sent to the Bluetooth module (HC-05) via the serial pin 1.  
+Finally, the code adds a delay of 100ms before sending the data again to the Bluetooth module.  
+# Hc06 Bluetooth module (Slave)  
+This code is used to receive data (the values of the switches, joysticks, and accelerometer of the esplora controller) from the Bluetooth module (HC-06) via the Serial3 pin on the Arduino board mega.  
+In the setup() function, we start the serial communication at a baud rate of 38400 for both Serial and Serial3.  
+In the loop() function, the code checks if there are 9 bytes available in the Serial3 buffer. If there are, it reads the first value and assigns it to the variable AccX, then reads the second value and assigns it to the variable AccY, and so on. These values are then printed to the serial monitor for debugging purposes. The delay of 100 milliseconds is to avoid overloading the serial communication.    
+# Inverse Kinematics   
+Inverse kinematics is a technique used in robotics to calculate the required movements of a robot in order to achieve a certain position. In the case of our  robot dog (The Polydog), inverse kinematics is used to calculate the movement of the dog's legs and joints (the angles that we need to send to the servomotors) in order to make the dog walk or run in a specific direction. This can be a complex process, as it involves solving a system of equations to determine the position and orientation of each joint in the dog's body in order to achieve the desired movement, that's why we haven't finished this part yet.  
+## Simulation  
+We wrote this code in python to create a 3D visualization of a robot dog. It utilizes the concepts of inverse kinematics to calculate the angles needed for the robot dog's legs to reach a specific position. We started by defining a function called "setupView" that sets up the 3D plot with a specific limits and labels for the x, y, and z axes. Then, we defined the rotation angles, omega, phi, and psi, as well as the center of the body and the length of the leg segments.  
+We then defined the bodyIK function which calculates the position of the legs based on the rotation angles and the center of the body. after that we defined the function LegIK, which calculates the angles needed for the legs to reach a specific position.    
+Finally, we utilize these functions to plot the robot dog in its specific position, with its legs in the correct angles. This visualization can be used to understand the movements of the robot dog and to debug any issues with the inverse kinematics calculations.Here is some results:  
+ ![Alt text](Simulation/Figure%202022-11-19%20000702.png)  
+ ![Alt text](Simulation/Figure%202022-11-19%20001131.png)  
+## Kinematics 
+The program first calculates the translation axis, which involves moving the foot in the side plane (hip offset and angle) and forwards/backwards in the side plane (shoulder angle).  
+Next, it calculates the rotation axis, which includes roll, pitch and yaw angles. Roll angle is calculated based on the difference in height for each leg and the angle for the hip when roll axis is in use. Pitch angle is calculated based on the difference in height for each leg, the angle for the shoulder when pitch axis is in use, and the new position to move the leg forwards/backwards. Yaw angle is calculated based on the existing angle of the leg from the center, the radius of the leg from the center of the robot based on x and y coordinates, and the new x and y coordinates based on the demand angle.  
+Finally, the program uses the calculated angles to move the robot's leg to the target position.  
+Like i said before , the code is still in development.     
+## Polydog code   
+We wrote this code to control the polydog using the  Bluetooth module (HC-06) to receive input data (the values of the switches, joysticks, and accelerometer of the esplora controller). The robot has 12 servos, each of which is controlled by the code to move the robot's legs. The code uses various libraries such as SPI, Servo, and Wire to interact with the servos and the Bluetooth module.  
+this code is still in development.  
