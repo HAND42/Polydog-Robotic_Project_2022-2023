@@ -68,17 +68,22 @@ void setup()
     // pinMode(rxPin, INPUT);
     // pinMode(txPin, OUTPUT);
 
-    dog.stand_up3();
+    
+    //dog.placing_legs();
     delay(1000);
+    
     
     
 }
 void loop()
 {
+    dog.stand_up4();
+    //dog.trot_walk();
     /*
     * When it receive 9 values from the bluetooth module it read them on the SoftwareSerial allocated in pin 10 and 11;
     * We print the values for debuging, and use them in order to move our robot.
     * */
+
 
     if (Serial3.available()>= 9) {
         AccX = Serial3.read(); // read the first value

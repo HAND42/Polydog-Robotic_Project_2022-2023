@@ -72,28 +72,25 @@ public:
      */
     void move_shoulder(int angle);
 
-
     /*
-    *Size of the square formed by the feet when the robot is in neutral position :
-    *
-    * 
+    *size of the square formed by the feet when the robot is in neutral position:
+    * 26.5*24.5
     */
-
 
     // Constants for LEG A
     int OFFSET_KNEE_A = 5; //10
     int OFFSET_HIP_A = 10;
-    int ANGLE_MIN_SHOULDER_A = 185; // 160
-    int ANGLE_MAX_SHOULDER_A = 5;   // -15
+    int ANGLE_MIN_SHOULDER_A = 180; // 160
+    int ANGLE_MAX_SHOULDER_A = 0;   // -15
     CustomServo SERVO_SHOULDER_A = CustomServo(19);
     CustomServo SERVO_HIP_A = CustomServo(18);
     CustomServo SERVO_KNEE_A = CustomServo(17);
 
     // Constants for LEG B
-    int OFFSET_KNEE_B = 204; // -18 -> 100 : -28 -> 90 : -28 -> 100 : -38
-    int OFFSET_HIP_B = 175;   // 60 -> 141 : 0 -> 81 : 9 -> 90 : 9 -> 59
-    int ANGLE_MIN_SHOULDER_B =10;
-    int ANGLE_MAX_SHOULDER_B = 190;
+    int OFFSET_KNEE_B = 195;
+    int OFFSET_HIP_B = 165;
+    int ANGLE_MIN_SHOULDER_B =15;
+    int ANGLE_MAX_SHOULDER_B = 195;
     CustomServo SERVO_SHOULDER_B = CustomServo(3);
     CustomServo SERVO_HIP_B = CustomServo(2);
     CustomServo SERVO_KNEE_B = CustomServo(1);
@@ -102,7 +99,7 @@ public:
     int OFFSET_KNEE_C = 200;
     int OFFSET_HIP_C = 165;
     int ANGLE_MIN_SHOULDER_C = 165;
-    int ANGLE_MAX_SHOULDER_C = -10;
+    int ANGLE_MAX_SHOULDER_C =-15;
     CustomServo SERVO_SHOULDER_C = CustomServo(13);
     CustomServo SERVO_HIP_C = CustomServo(14);
     CustomServo SERVO_KNEE_C = CustomServo(15);
@@ -110,8 +107,8 @@ public:
     // Constants for LEG D
     int OFFSET_KNEE_D = 0;
     int OFFSET_HIP_D = 0;
-    int ANGLE_MIN_SHOULDER_D = 5;
-    int ANGLE_MAX_SHOULDER_D = 185;
+    int ANGLE_MIN_SHOULDER_D = 15;
+    int ANGLE_MAX_SHOULDER_D = 195;
     CustomServo SERVO_SHOULDER_D = CustomServo(29);
     CustomServo SERVO_HIP_D = CustomServo(30);
     CustomServo SERVO_KNEE_D = CustomServo(31);
