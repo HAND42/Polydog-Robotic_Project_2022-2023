@@ -98,8 +98,9 @@ public:
      */
     void move_left();
     void raise_leg();
-    void move_leg(int i);
     void move_2leg(int i, int j);
+    void move_leg(int i);
+    void move_leg2(int i);
 
     Leg legA;
     Leg legB;

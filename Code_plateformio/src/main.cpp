@@ -69,15 +69,19 @@ void setup()
     // pinMode(txPin, OUTPUT);
 
     
-    //dog.placing_legs();
-    delay(1000);
+    dog.stand_up();
+    delay(2000);
+    
     
     
     
 }
 void loop()
 {
-    dog.stand_up4();
+    // dog.move_leg(0);
+    // delay(1000);
+    // dog.move_2leg(2,0);
+    // delay(1000);
     //dog.trot_walk();
     /*
     * When it receive 9 values from the bluetooth module it read them on the SoftwareSerial allocated in pin 10 and 11;
@@ -140,7 +144,7 @@ void loop()
             }
             if (Switch3 != 1){
                 dog.stand_up();
-                dog.move_leg(3);
+                dog.move_leg2(3);
             }
             if (Switch4 != 1){
                 dog.stand_up3();
