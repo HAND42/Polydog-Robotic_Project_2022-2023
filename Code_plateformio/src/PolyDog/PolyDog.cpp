@@ -40,7 +40,7 @@ void PolyDog::stand_up()
     for (int i = 0; i < 4; i++)
     {
         leg_list[i].move_hip(115); 
-        leg_list[i].move_knee(55);
+        leg_list[i].move_knee(65);
     }
 
     this->hold_shoulders();
@@ -112,6 +112,43 @@ void PolyDog::stand_up4()
      this->hold_shoulders(); 
 
 }
+
+void PolyDog::stand_up5()
+{
+    for (int i = 0; i < 4; i++)
+    {
+        leg_list[i].move_hip(120); 
+        leg_list[i].move_knee(57);
+    }
+
+    this->hold_shoulders(); 
+}
+
+void PolyDog::stand_up6()
+{
+    for (int i = 0; i < 4; i++)
+    {
+        leg_list[i].move_hip(130); 
+        leg_list[i].move_knee(40);
+    }
+
+    this->hold_shoulders(); 
+}
+void PolyDog::stand_up7()
+{
+    leg_list[3].move_hip(130); 
+    leg_list[3].move_knee(40);
+    leg_list[2].move_hip(130); 
+    leg_list[2].move_knee(40);
+
+    leg_list[0].move_hip(110); 
+    leg_list[0].move_knee(73);
+    leg_list[1].move_hip(110); 
+    leg_list[1].move_knee(73);
+
+    this->hold_shoulders(); 
+}
+
 /**
  * By retrieving the value of the accelerometer of the Esplora remote control,
  * The robot is oriented according to the inclination of the joystick.
@@ -151,10 +188,10 @@ void PolyDog::hold_shoulders()
     80 : he brings his legs together
     */
 
-    legA.move_shoulder(90);
-    legB.move_shoulder(90);
-    legC.move_shoulder(90);
-    legD.move_shoulder(90);
+    legA.move_shoulder(100);
+    legB.move_shoulder(100);
+    legC.move_shoulder(100);
+    legD.move_shoulder(100);
 }
 
 /**
@@ -391,12 +428,23 @@ void PolyDog::move_2leg(int i, int j)
 }
 
 void PolyDog::move_leg(int i){
+    int k=(i+2)%4;
+    leg_list[k].move_knee(105);
+    for (int j = 0; j< 4; j++)
+    {
+        if (j!=i){
+            leg_list[j].move_shoulder(90); 
+        } 
+    }
     leg_list[i].move_knee(115);
     leg_list[i].move_hip(115);
     delay(2000);
-    leg_list[i].move_hip(110); 
-    leg_list[i].move_knee(73);
+    this->hold_shoulders();
+    leg_list[i].move_hip(100); 
+    leg_list[i].move_knee(90);
+     leg_list[k].move_knee(90);
     delay(2000);
+    
 
 }
 
@@ -404,10 +452,29 @@ void PolyDog::move_leg2(int i){
     leg_list[i].move_knee(115);
     leg_list[i].move_hip(115);
     delay(2000);
-    leg_list[i].move_hip(100); 
-    leg_list[i].move_knee(90);
+    leg_list[1].move_hip(110); 
+    leg_list[1].move_knee(73);
     delay(2000);
 
+}
+
+void PolyDog::moving_shoulders(){
+    leg_list[1].move_shoulder(85);
+    leg_list[2].move_shoulder(85);
+
+    leg_list[0].move_knee(115);
+    leg_list[0].move_hip(115);
+    leg_list[3].move_knee(115);
+    leg_list[3].move_hip(115);
+
+    leg_list[0].move_shoulder(110);
+    leg_list[3].move_shoulder(110);
+
+    leg_list[0].move_knee(90);
+    leg_list[0].move_hip(100);
+    leg_list[3].move_knee(90);
+    leg_list[3].move_hip(100);
+    
 }
 /**
  * This methods moves the robot one step to the right.

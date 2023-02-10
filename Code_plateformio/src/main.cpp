@@ -69,20 +69,31 @@ void setup()
     // pinMode(txPin, OUTPUT);
 
     
-    dog.stand_up();
+    //dog.placing_legs();
+    dog.stand_up7();
     delay(2000);
-    
+    // dog.stand_up6();
+    // delay(2000);
+    // dog.moving_shoulders();
     
     
     
 }
 void loop()
 {
-    // dog.move_leg(0);
+    dog.move_leg2(1);
+    delay(4000);
+    // dog.move_leg(1);
     // delay(1000);
+    // dog.move_leg(2);
+    // delay(1000);
+    // dog.move_leg(3);
+    // delay(1000);
+
     // dog.move_2leg(2,0);
     // delay(1000);
-    //dog.trot_walk();
+    
+    
     /*
     * When it receive 9 values from the bluetooth module it read them on the SoftwareSerial allocated in pin 10 and 11;
     * We print the values for debuging, and use them in order to move our robot.
