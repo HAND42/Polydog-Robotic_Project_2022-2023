@@ -61,6 +61,9 @@ public:
     void stand_up2();
     void stand_up3();
     void stand_up4();
+    void stand_up5();
+    void stand_up6();
+    void stand_up7();
     
     void orientation(int AccX, int AccY);
     
@@ -98,8 +101,10 @@ public:
      */
     void move_left();
     void raise_leg();
-    void move_leg(int i);
     void move_2leg(int i, int j);
+    void move_leg(int i);
+    void move_leg2(int i);
+    void moving_shoulders();
 
     Leg legA;
     Leg legB;

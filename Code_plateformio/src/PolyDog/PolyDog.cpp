@@ -40,7 +40,7 @@ void PolyDog::stand_up()
     for (int i = 0; i < 4; i++)
     {
         leg_list[i].move_hip(115); 
-        leg_list[i].move_knee(55);
+        leg_list[i].move_knee(65);
     }
 
     this->hold_shoulders();
@@ -112,6 +112,43 @@ void PolyDog::stand_up4()
      this->hold_shoulders(); 
 
 }
+
+void PolyDog::stand_up5()
+{
+    for (int i = 0; i < 4; i++)
+    {
+        leg_list[i].move_hip(120); 
+        leg_list[i].move_knee(57);
+    }
+
+    this->hold_shoulders(); 
+}
+
+void PolyDog::stand_up6()
+{
+    for (int i = 0; i < 4; i++)
+    {
+        leg_list[i].move_hip(130); 
+        leg_list[i].move_knee(40);
+    }
+
+    this->hold_shoulders(); 
+}
+void PolyDog::stand_up7()
+{
+    leg_list[3].move_hip(130); 
+    leg_list[3].move_knee(40);
+    leg_list[2].move_hip(130); 
+    leg_list[2].move_knee(40);
+
+    leg_list[0].move_hip(110); 
+    leg_list[0].move_knee(73);
+    leg_list[1].move_hip(110); 
+    leg_list[1].move_knee(73);
+
+    this->hold_shoulders(); 
+}
+
 /**
  * By retrieving the value of the accelerometer of the Esplora remote control,
  * The robot is oriented according to the inclination of the joystick.
@@ -120,8 +157,8 @@ void PolyDog::stand_up4()
  */
 void PolyDog::orientation(int AccX, int AccY){
 
-    int angle_accx = (((AccX-130)+5)/10)*4;
-    int angle_accy = (AccY-125)/4;
+    int angle_accx = (((AccX-130)+5)/10)*2;
+    int angle_accy = (AccY-125)/5;
     legA.move_shoulder(90 -angle_accx);
     legB.move_shoulder(90 +angle_accx);
     legC.move_shoulder(90 +angle_accx);
@@ -151,10 +188,10 @@ void PolyDog::hold_shoulders()
     80 : he brings his legs together
     */
 
-    legA.move_shoulder(90);
-    legB.move_shoulder(90);
-    legC.move_shoulder(90);
-    legD.move_shoulder(90);
+    legA.move_shoulder(100);
+    legB.move_shoulder(100);
+    legC.move_shoulder(100);
+    legD.move_shoulder(100);
 }
 
 /**
@@ -292,108 +329,153 @@ void PolyDog::range_motion_shoulder()
 
 void PolyDog::trot_walk()
 {
+    int time =300;
     leg_list[0].move_knee(125);
     leg_list[0].move_hip(115);
     leg_list[2].move_knee(125);
     leg_list[2].move_hip(115);
+    delay(time);
     leg_list[1].move_hip(115);
-    leg_list[1].move_knee(65);
+    leg_list[1].move_knee(55);
     leg_list[3].move_hip(115);
-    leg_list[3].move_knee(65);
-    delay(200);
+    leg_list[3].move_knee(55);
+    delay(time);
     leg_list[0].move_knee(125);
     leg_list[0].move_hip(90);
     leg_list[2].move_knee(125);
     leg_list[2].move_hip(90);
-    delay(200);
+    delay(time);
     leg_list[0].move_knee(100);
     leg_list[0].move_hip(88);
     leg_list[2].move_knee(100);
     leg_list[2].move_hip(88);
   
-    delay(200);
-
-    leg_list[0].move_hip(115);
-    leg_list[0].move_knee(65);
-    leg_list[2].move_hip(115);
-    leg_list[2].move_knee(65);
-    delay(200);
+    delay(time);
     leg_list[1].move_knee(125);
     leg_list[1].move_hip(115);
     leg_list[3].move_knee(125);
     leg_list[3].move_hip(115);
-
-    delay(200);
+    delay(time);
+    leg_list[0].move_hip(115);
+    leg_list[0].move_knee(55);
+    leg_list[2].move_hip(115);
+    leg_list[2].move_knee(55);
+    delay(time);
     leg_list[1].move_knee(125);
     leg_list[1].move_hip(90);
     leg_list[3].move_knee(125);
     leg_list[3].move_hip(90);
-    delay(200);
+    delay(time);
     leg_list[1].move_knee(100);
     leg_list[1].move_hip(88);
     leg_list[3].move_knee(100);
     leg_list[3].move_hip(88);
-    delay(200);
+    delay(time);
 }
 
 void PolyDog::trot_walk2()
 {
+    int time=300;
     leg_list[0].move_knee(100);
     leg_list[0].move_hip(110);
     leg_list[2].move_knee(100);
     leg_list[2].move_hip(110);
-
+    delay(time);
     leg_list[1].move_hip(115);
-    leg_list[1].move_knee(65);
+    leg_list[1].move_knee(55);
     leg_list[3].move_hip(115);
-    leg_list[3].move_knee(65);
-    delay(300);
-    leg_list[0].move_knee(73);
+    leg_list[3].move_knee(55);
+    delay(time);
+    leg_list[0].move_knee(85);
     leg_list[0].move_hip(110);
-    leg_list[2].move_knee(73);
+    leg_list[2].move_knee(85);
     leg_list[2].move_hip(110);
-    delay(300);
-
-    leg_list[0].move_hip(115);
-    leg_list[0].move_knee(65);
-    leg_list[2].move_hip(115);
-    leg_list[2].move_knee(65);
+    delay(time);
 
     leg_list[1].move_knee(100);
     leg_list[1].move_hip(110);
     leg_list[3].move_knee(100);
     leg_list[3].move_hip(110);
+    delay(time);
 
-    delay(300);
-    leg_list[1].move_knee(73);
+    leg_list[0].move_hip(115);
+    leg_list[0].move_knee(55);
+    leg_list[2].move_hip(115);
+    leg_list[2].move_knee(55);
+    delay(time);
+
+    leg_list[1].move_knee(85);
     leg_list[1].move_hip(110);
-    leg_list[3].move_knee(73);
+    leg_list[3].move_knee(85 );
     leg_list[3].move_hip(110);
-    delay(300);
+    delay(time);
 }
 
-void PolyDog::move_leg(int i)
+void PolyDog::move_2leg(int i, int j)
 {
     leg_list[i].move_knee(115);
     leg_list[i].move_hip(115);
-    delay(500);
+    leg_list[j].move_knee(115);
+    leg_list[j].move_hip(115);
+    delay(2000);
+    leg_list[i].move_hip(110); 
+    leg_list[i].move_knee(73);
+    leg_list[j].move_hip(110); 
+    leg_list[j].move_knee(73);
+    delay(2000);
+   
+
+}
+
+void PolyDog::move_leg(int i){
+    int k=(i+2)%4;
+    leg_list[k].move_knee(105);
+    for (int j = 0; j< 4; j++)
+    {
+        if (j!=i){
+            leg_list[j].move_shoulder(90); 
+        } 
+    }
     leg_list[i].move_knee(115);
-    leg_list[i].move_hip(90);
-    delay(500);
-    leg_list[i].move_knee(100);
-    leg_list[i].move_hip(90);
-    delay(500);
-
-
-}
-
-void PolyDog::move_2leg(int i, int j){
-    leg_list[i].move_knee(125);
     leg_list[i].move_hip(115);
-    leg_list[j].move_knee(90);
+    delay(2000);
+    this->hold_shoulders();
+    leg_list[i].move_hip(100); 
+    leg_list[i].move_knee(90);
+     leg_list[k].move_knee(90);
+    delay(2000);
+    
 
 }
 
+void PolyDog::move_leg2(int i){
+    leg_list[i].move_knee(115);
+    leg_list[i].move_hip(115);
+    delay(2000);
+    leg_list[1].move_hip(110); 
+    leg_list[1].move_knee(73);
+    delay(2000);
+
+}
+
+void PolyDog::moving_shoulders(){
+    leg_list[1].move_shoulder(85);
+    leg_list[2].move_shoulder(85);
+
+    leg_list[0].move_knee(115);
+    leg_list[0].move_hip(115);
+    leg_list[3].move_knee(115);
+    leg_list[3].move_hip(115);
+
+    leg_list[0].move_shoulder(110);
+    leg_list[3].move_shoulder(110);
+
+    leg_list[0].move_knee(90);
+    leg_list[0].move_hip(100);
+    leg_list[3].move_knee(90);
+    leg_list[3].move_hip(100);
+    
+}
 /**
  * This methods moves the robot one step to the right.
  * WARNING : It is still not working properly. The robot needs to be lifted a little bit to walk properly.
