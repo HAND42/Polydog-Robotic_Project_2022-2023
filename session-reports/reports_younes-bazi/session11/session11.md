@@ -1,6 +1,6 @@
 # SESSION 11 OUTCOME REPORT
 ## Date: 07/02/2023
-## Main event of the session: Simulating the polydog with Isaac Sim . 
+## Main event of the session: Converting the 3D model of the Polydog to an URDF file (Part 1) . 
 During this session, we discovered a way to import the 3D model of the Polydog into Isaac Sim. In the beginning, we thought of importing the robot parts from fusion 360 into isaac sim. However, this process was time-consuming as we had to define each joint individually, which required a significant amount of effort and attention to detail. Fortunately, we discovered a new and more efficient way to import our 3D model into Isaac Sim. Instead of using Fusion 360 and defining each joint manually, we are going to convert the 3d model of the robot that my colleague worked on it on onshape to and URDF file and then importing it to isaac sim.  
 ![Alt text](S11/Capture%20d%E2%80%99%C3%A9cran%202023-02-17%20190025.png)  
 ## URDF file   
