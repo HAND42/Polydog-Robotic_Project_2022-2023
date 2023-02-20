@@ -39,7 +39,7 @@ After importing the 3D model, we can run the Onshape-to-Robot plugin to convert 
 `onshape-to-robot polydog` (the name of the directory)   
 ![Alt text](S12/Capture%20d%E2%80%99%C3%A9cran%202023-02-18%20023003.png)  
 ![Alt text](S12/Capture%20d%E2%80%99%C3%A9cran%202023-02-18%20023102.png)  
-As you can see the URDF file is ready, we just need to check how the import went using pyBullet. PyBullet is a physics engine that come with the onshape-to-robot pluging, it is used simulating and testing the behavior of robots and other mechanical systems. It is an open-source software developed by the Robotics and AI Lab at the University of Massachusetts, Amherst, and is widely used in research and industry. The combination of Onshape-to-Robot and PyBullet allows for a streamlined process of designing and testing robots, which can save time and reduce costs.  
+As you can see the URDF file is ready, we just need to check how the import went using pyBullet. PyBullet is a physics engine that come with the onshape-to-robot pluging, it is for used simulating and testing the behavior of robots and other mechanical systems. It is an open-source software developed by the Robotics and AI Lab at the University of Massachusetts, Amherst, and is widely used in research and industry. The combination of Onshape-to-Robot and PyBullet allows for a streamlined process of designing and testing robots, which can save time and reduce costs.  
 We use this command to run pyBullet:  
 `Onshape-to-robot-bullet polydog`  (the name of the directory)  
 Here is the results:  
