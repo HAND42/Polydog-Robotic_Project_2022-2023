@@ -44,4 +44,4 @@ We use this command to run pyBullet:
 `Onshape-to-robot-bullet polydog`  (the name of the directory)  
 Here is the results:  
 ![Alt text](S12/Capture%20d%E2%80%99%C3%A9cran%202023-02-20%20011327.png)  
-As you can see, the software only imported one servo motor, the reason why it did that is still not clear to me.
+As you can see, the software only imported one servo motor, the reason why it did this is still not clear to me yet.
