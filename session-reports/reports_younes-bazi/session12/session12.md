@@ -1,5 +1,5 @@
 # SESSION 12 OUTCOME REPORT
-## Date: 07/02/2023
+## Date: 14/02/2023
 ## Main event of the session: Converting the 3D model of the Polydog to an URDF file (Part 2) .
 During this session i tried to convert the 3D model of the polydog to an urdf file and in this session report, I will elaborate on the steps required to convert a 3D model of a robot on Onshape to a URDF file using the Onshape-to-Robot plugin on Ubuntu. This conversion will allow us to simulate the robot's motion and control it through Isaac Sim.  
 
