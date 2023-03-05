@@ -70,7 +70,7 @@ void setup()
 
     
     //dog.placing_legs();
-    dog.stand_up7();
+    dog.stand_up5();
     delay(2000);
     // dog.stand_up6();
     // delay(2000);
@@ -81,9 +81,10 @@ void setup()
 }
 void loop()
 {
-    dog.move_leg2(1);
-    delay(4000);
-    // dog.move_leg(1);
+
+    dog.avance();
+    //dog.move_leg2(1);
+    // dog.move_leg2(1);
     // delay(1000);
     // dog.move_leg(2);
     // delay(1000);
@@ -140,10 +141,10 @@ void loop()
             delay(10);
 
              if (JoyY <= 100){
-                dog.trot_walk();
+                dog.avance();
             }
              if (JoyY >= 150){
-                dog.trot_walk();
+                dog.avance();
              }
             if (Switch1 != 1){
                 orientation=1-orientation;
@@ -151,7 +152,7 @@ void loop()
             }
             if (Switch2 != 1){
                 dog.stand_up2();
-                dog.move_leg(0);
+                dog.move_leg2(0);
             }
             if (Switch3 != 1){
                 dog.stand_up();

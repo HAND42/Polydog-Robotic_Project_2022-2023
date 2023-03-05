@@ -28,6 +28,7 @@
 
 #include <Arduino.h>
 #include "CustomServo/CustomServo.h"
+#include "Accelerometer/Accelerometer.h"
 #include "Leg/Leg.h"
 
 /**
@@ -67,9 +68,11 @@ public:
     
     void orientation(int AccX, int AccY);
     
-
+    void avance();
     void trot_walk();
     void trot_walk2();
+
+    void horizontal_pos(Accelerometer dof);
 
     void hold_hip_knee();
     /**

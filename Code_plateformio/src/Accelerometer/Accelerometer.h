@@ -32,7 +32,7 @@ class Accelerometer
     public:
         Accelerometer();
         void start();
-        void display_rolls_pitch();
+        String display_rolls_pitch();
         
         
     private:

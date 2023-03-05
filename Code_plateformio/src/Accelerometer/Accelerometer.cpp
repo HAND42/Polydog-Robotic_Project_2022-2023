@@ -52,7 +52,7 @@ void Accelerometer::start(){
     delay(10);
 }
 
-void Accelerometer::display_rolls_pitch(){
+String Accelerometer::display_rolls_pitch(){
 
     // === Read acceleromter data === //
   Wire.beginTransmission(ADXL345);
@@ -74,9 +74,21 @@ void Accelerometer::display_rolls_pitch(){
   rollF = 0.94 * rollF + 0.06 * roll;
   pitchF = 0.94 * pitchF + 0.06 * pitch;
 
-  Serial.print(rollF); //Penché en avant en arrière
-  Serial.print("/");
-  Serial.println(pitchF); //Penché d'un côté ou de l'autre
+  char str1[16];
+  char str2[16];
+
+dtostrf(rollF, 7, 2, str1); // convert f1 to a string with 2 decimal places
+dtostrf(pitchF, 7, 2, str2); // convert f2 to a string with 2 decimal places
+
+char result[32];
+strcpy(result, str1); // copy str1 to result
+strcat(result, str2); // concatenate str2 to result
+
+return result;
+
+  // Serial.print(rollF); //Penché en avant en arrière
+  // Serial.print("/");
+  // Serial.println(pitchF); //Penché d'un côté ou de l'autre
 
 }
 

@@ -14,6 +14,7 @@
 
 #include <Arduino.h>
 #include "CustomServo/CustomServo.h"
+#include "Accelerometer/Accelerometer.h"
 #include "PolyDog/PolyDog.h"
 #include "Leg/Leg.h"
 
@@ -124,6 +125,11 @@ void PolyDog::stand_up5()
     this->hold_shoulders(); 
 }
 
+void PolyDog::horizontal_pos(Accelerometer dof){
+    String acc= dof.display_rolls_pitch();
+    Serial.println(acc);
+}
+
 void PolyDog::stand_up6()
 {
     for (int i = 0; i < 4; i++)
@@ -142,9 +148,9 @@ void PolyDog::stand_up7()
     leg_list[2].move_knee(40);
 
     leg_list[0].move_hip(110); 
-    leg_list[0].move_knee(73);
+    leg_list[0].move_knee(63);
     leg_list[1].move_hip(110); 
-    leg_list[1].move_knee(73);
+    leg_list[1].move_knee(63);
 
     this->hold_shoulders(); 
 }
@@ -418,10 +424,10 @@ void PolyDog::move_2leg(int i, int j)
     leg_list[j].move_knee(115);
     leg_list[j].move_hip(115);
     delay(2000);
-    leg_list[i].move_hip(110); 
-    leg_list[i].move_knee(73);
-    leg_list[j].move_hip(110); 
-    leg_list[j].move_knee(73);
+    leg_list[i].move_hip(120); 
+    leg_list[i].move_knee(57);
+    leg_list[j].move_hip(120); 
+    leg_list[j].move_knee(57);
     delay(2000);
    
 
@@ -449,12 +455,46 @@ void PolyDog::move_leg(int i){
 }
 
 void PolyDog::move_leg2(int i){
-    leg_list[i].move_knee(115);
-    leg_list[i].move_hip(115);
-    delay(2000);
-    leg_list[1].move_hip(110); 
-    leg_list[1].move_knee(73);
-    delay(2000);
+    int time=1000;
+    leg_list[i].move_knee(75);
+    delay(time);
+    leg_list[i].move_hip(120); 
+    leg_list[i].move_knee(57);
+    delay(time);
+    leg_list[i].move_hip(130); 
+    leg_list[i].move_knee(40);
+    delay(time);
+
+}
+
+void PolyDog::avance(){
+    int time =200;
+    leg_list[1].move_hip(130); 
+    leg_list[1].move_knee(40);
+    leg_list[3].move_hip(130); 
+    leg_list[3].move_knee(40);
+    delay(time);
+    leg_list[0].move_knee(75);
+    leg_list[2].move_knee(75);
+    delay(time);
+    leg_list[0].move_hip(120); 
+    leg_list[0].move_knee(57);
+    leg_list[2].move_hip(120); 
+    leg_list[2].move_knee(57);
+    delay(time);
+    leg_list[1].move_knee(75);
+    leg_list[3].move_knee(75);
+    delay(time);
+    leg_list[0].move_hip(130); 
+    leg_list[0].move_knee(40);
+    leg_list[2].move_hip(130); 
+    leg_list[2].move_knee(40);
+    delay(time);
+    leg_list[1].move_hip(120); 
+    leg_list[1].move_knee(57);
+    leg_list[3].move_hip(120); 
+    leg_list[3].move_knee(57);
+    delay(time);
 
 }
 
