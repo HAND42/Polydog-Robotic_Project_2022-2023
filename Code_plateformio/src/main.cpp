@@ -69,8 +69,8 @@ void setup()
     // pinMode(txPin, OUTPUT);
 
     
-    //dog.placing_legs();
-    dog.stand_up5();
+    // dog.placing_legs();
+    dog.stand_up7();
     delay(2000);
     // dog.stand_up6();
     // delay(2000);
@@ -82,8 +82,10 @@ void setup()
 void loop()
 {
 
-    dog.avance();
-    //dog.move_leg2(1);
+    //dog.avance();
+    // dog.move_leg2(0);
+    dog.stand_up7();
+    delay(1000);
     // dog.move_leg2(1);
     // delay(1000);
     // dog.move_leg(2);

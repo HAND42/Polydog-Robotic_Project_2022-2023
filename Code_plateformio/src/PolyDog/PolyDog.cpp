@@ -147,10 +147,10 @@ void PolyDog::stand_up7()
     leg_list[2].move_hip(130); 
     leg_list[2].move_knee(40);
 
-    leg_list[0].move_hip(110); 
-    leg_list[0].move_knee(63);
-    leg_list[1].move_hip(110); 
-    leg_list[1].move_knee(63);
+    leg_list[0].move_hip(100); 
+    leg_list[0].move_knee(78);
+    leg_list[1].move_hip(100); 
+    leg_list[1].move_knee(78);
 
     this->hold_shoulders(); 
 }
@@ -456,14 +456,9 @@ void PolyDog::move_leg(int i){
 
 void PolyDog::move_leg2(int i){
     int time=1000;
-    leg_list[i].move_knee(75);
+    leg_list[i].move_knee(115);
     delay(time);
-    leg_list[i].move_hip(120); 
-    leg_list[i].move_knee(57);
-    delay(time);
-    leg_list[i].move_hip(130); 
-    leg_list[i].move_knee(40);
-    delay(time);
+    
 
 }
 
