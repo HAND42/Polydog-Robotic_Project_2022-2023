@@ -24,43 +24,42 @@
 #define txPin 11
 #define baudrate 38400
 
+// Default value of the joystick buttons
 
-//Default value of the joystick buttons
+int AccX = 136;
+int AccY = 128;
+int JoyX = 127;
+int JoyY = 132;
+int Switch1 = 1;
+int Switch2 = 1;
+int Switch3 = 1;
+int Switch4 = 1;
+int Joybutton = 1;
 
-int AccX= 136;
-int AccY= 128;
-int JoyX= 127;
-int JoyY= 132;
-int Switch1= 1;
-int Switch2= 1;
-int Switch3= 1;
-int Switch4= 1;
-int Joybutton=1;
-
-/* We instanciate the robot dog and the accelerometer inside the body 
-*to mesure the pitch and the roll of the robot.
-*/
+/* We instanciate the robot dog and the accelerometer inside the body
+ *to mesure the pitch and the roll of the robot.
+ */
 
 PolyDog dog = PolyDog();
 Accelerometer dof = Accelerometer();
 
-SoftwareSerial Serial3 =  SoftwareSerial(rxPin, txPin);
+SoftwareSerial Serial3 = SoftwareSerial(rxPin, txPin);
 // RemoteEsplora remote = RemoteEsplora(rxPin,txPin);
- bool orientation = false;
-
+bool orientation = false;
 
 void setup()
 {
     // Sets the data rate in bits per second (baud) for serial data transmission.
-    
+
     Serial.begin(115200); // Scc32 default baud rate
-    while (!Serial) {
-    ; // wait for serial port to connect. Needed for Native USB only
+    while (!Serial)
+    {
+        ; // wait for serial port to connect. Needed for Native USB only
     }
 
     Serial.println("Goodnight moon!");
-   
-    //remote.begin(baudrate);
+
+    // remote.begin(baudrate);
     Serial3.begin(baudrate);
     // Serial3.println("Hello, world?");
     dof.start();
@@ -68,24 +67,20 @@ void setup()
     // pinMode(rxPin, INPUT);
     // pinMode(txPin, OUTPUT);
 
-    
     // dog.placing_legs();
-    dog.stand_up7();
+    dog.stand_up6();
     delay(2000);
     // dog.stand_up6();
     // delay(2000);
     // dog.moving_shoulders();
-    
-    
-    
 }
 void loop()
 {
-
-    //dog.avance();
+    // dog.stand_up7();
+    dog.avance();
     // dog.move_leg2(0);
-    dog.stand_up7();
-    delay(1000);
+    // dog.stand_up7();
+    // delay(1000);
     // dog.move_leg2(1);
     // delay(1000);
     // dog.move_leg(2);
@@ -95,20 +90,20 @@ void loop()
 
     // dog.move_2leg(2,0);
     // delay(1000);
-    
-    
+
     /*
-    * When it receive 9 values from the bluetooth module it read them on the SoftwareSerial allocated in pin 10 and 11;
-    * We print the values for debuging, and use them in order to move our robot.
-    * */
+     * When it receive 9 values from the bluetooth module it read them on the SoftwareSerial allocated in pin 10 and 11;
+     * We print the values for debuging, and use them in order to move our robot.
+     * */
 
-
-    if (Serial3.available()>= 9) {
+    if (Serial3.available() >= 9)
+    {
         AccX = Serial3.read(); // read the first value
-        if (AccX !=1 | AccX!=0){
+        if (AccX != 1 | AccX != 0)
+        {
             AccY = Serial3.read(); // read the second value
 
-            JoyX = Serial3.read();// read the third value
+            JoyX = Serial3.read(); // read the third value
 
             JoyY = Serial3.read();
 
@@ -142,56 +137,60 @@ void loop()
             Serial.println(Joybutton);
             delay(10);
 
-             if (JoyY <= 100){
+            if (JoyY <= 100)
+            {
                 dog.avance();
             }
-             if (JoyY >= 150){
+            if (JoyY >= 150)
+            {
                 dog.avance();
-             }
-            if (Switch1 != 1){
-                orientation=1-orientation;
+            }
+            if (Switch1 != 1)
+            {
+                orientation = 1 - orientation;
                 dog.stand_up3();
             }
-            if (Switch2 != 1){
+            if (Switch2 != 1)
+            {
                 dog.stand_up2();
                 dog.move_leg2(0);
             }
-            if (Switch3 != 1){
+            if (Switch3 != 1)
+            {
                 dog.stand_up();
                 dog.move_leg2(3);
             }
-            if (Switch4 != 1){
+            if (Switch4 != 1)
+            {
                 dog.stand_up3();
             }
-
         }
-        else{
-            AccX=130;
-            AccY=130;
+        else
+        {
+            AccX = 130;
+            AccY = 130;
         }
     }
 
-    if (orientation){
-    dog.orientation(AccX,AccY);
+    if (orientation)
+    {
+        dog.orientation(AccX, AccY);
     }
 
+    // Here is a problem from the remote, it can't handle when there are a lot of values coming in at the same time
+    // and the button values are off.
 
-// Here is a problem from the remote, it can't handle when there are a lot of values coming in at the same time 
-//and the button values are off.
+    // AccX= 1
+    // AccY= 1
+    // JoyX= 139
+    // JoyY= 127
+    // Switch1= 126
+    // Switch2= 132
+    // Switch3= 1
+    // Switch4= 1
+    // Joybutton= 1
 
-// AccX= 1
-// AccY= 1
-// JoyX= 139
-// JoyY= 127
-// Switch1= 126
-// Switch2= 132
-// Switch3= 1
-// Switch4= 1
-// Joybutton= 1
+    // remote.RemoteInstruction(dog);
 
-    
-    //remote.RemoteInstruction(dog);
-    
     // dof.display_rolls_pitch();
-    
 }

@@ -1,8 +1,8 @@
-# Session 13  - Week 10
+# Session 13 - Week 10
 
 ##### Polydog_v3 -- March 2023
 
------
+---
 
 ## Importing Onshape file with joint
 
@@ -28,8 +28,8 @@ export ONSHAPE_SECRET_KEY=Your_Secret_Key
 Then I created a my-robot/config.json file with the following inside :
 
 {
-    "documentId": "document-id",
-    "outputFormat": "urdf"
+"documentId": "document-id",
+"outputFormat": "urdf"
 }
 
 The document-id is the number (below XXXXXXXXX) you can find in Onshape URL:
@@ -42,13 +42,10 @@ onshape-to-robot my-robot :
 
 It tells me that I didn't set the keys in the .bashrc. I also tried to alternatively, store those keys in the config.json file, that will override those parameters. ---> Then it worked.
 
-I have all the file usd of my document onshape. I will try to open robot2_version__2.usd in Isaac Sim.
+I have all the file usd of my document onshape. I will try to open robot2_version\_\_2.usd in Isaac Sim.
 
 Unfortunately the links are not imported into the software, so it is the same. Here is an example of the simulation :
 
 ![](physics-isaac_sim.gif)
 
 The result should have produced a collapse of the lower parts of the legs, but they were detached from the body proving in my opinion, the non presence of connections.
-
-
-

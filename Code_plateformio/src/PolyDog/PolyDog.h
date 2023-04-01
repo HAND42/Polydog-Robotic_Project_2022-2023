@@ -19,7 +19,7 @@
  *
  * @authors ANJOU Raphael & DURAND Hugo
  * <p>
- * Contact: anjou.raphael\@gmail.com | hugo.durand971\@gmail.com 
+ * Contact: anjou.raphael\@gmail.com | hugo.durand971\@gmail.com
  *
  */
 
@@ -65,10 +65,12 @@ public:
     void stand_up5();
     void stand_up6();
     void stand_up7();
-    
+    void stand_up8();
+
     void orientation(int AccX, int AccY);
-    
+
     void avance();
+    void avance2();
     void trot_walk();
     void trot_walk2();
 
