@@ -2,11 +2,11 @@ import math
 
 # define the length of the different parts of the leg
 
-CE = 0.0
-CD = 0.0
-DE = 0.0
-DA = 0.0
-OA = 0.0
+CE = 170.5
+CD = 47.273
+DE = 124.7
+DA = 130
+OA = 46.5
 omega = math.acos((DE ** 2 + CD ** 2 - CE ** 2) / (2 * CD * DE))
 
 

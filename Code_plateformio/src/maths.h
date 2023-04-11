@@ -3,14 +3,14 @@
 
 // define the lenght of the different part of the leg
 
-float CE = 0;
-float CD = 0;
-float DE = 0;
-float DA = 0;
-float OA = 0;
+float CE = 170.5;
+float CD = 47.273;
+float DE = 124.7;
+float DA = 130;
+float OA = 46.5;
 float omega = acos((pow(DE, 2) + pow(CD, 2) - pow(CE, 2)) / (2 * CD * DE));
 
-std::tuple<float, float> get_coordonate_E_simplified(float ha, float ka)
+float *get_coordonate_E_simplified(float ha, float ka)
 {
     int AG = 0;
     float EG = 0;
@@ -24,10 +24,11 @@ std::tuple<float, float> get_coordonate_E_simplified(float ha, float ka)
     EG = sin(beta - little_phi) * AE;
     AG = cos(beta - little_phi) * AE;
 
-    return std::make_tuple(AG, EG); // retourner un tuple contenant les valeurs a, b, et c
+    static float coord[2] = {AG, EG}; // return an array of 2 floats
+    return coord;
 }
 
-std::tuple<float, float, float> get_coordonate_E(float ha, float ka, float sa)
+float *get_coordonate_E(float ha, float ka, float sa)
 {
     float z, x, y;
 
@@ -47,5 +48,6 @@ std::tuple<float, float, float> get_coordonate_E(float ha, float ka, float sa)
     y = EG;
     z = OA * sin(sa) + AG;
 
-    return std::make_tuple(x, y, z); // retourner un tuple contenant les valeurs a, b, et c
+    static float coord[3] = {x, y, z}; // return an array of 2 floats
+    return coord;
 }
