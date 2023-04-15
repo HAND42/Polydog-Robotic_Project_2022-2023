@@ -57,8 +57,6 @@ void setup()
         ; // wait for serial port to connect. Needed for Native USB only
     }
 
-    Serial.println("Goodnight moon!");
-
     // remote.begin(baudrate);
     Serial3.begin(baudrate);
     // Serial3.println("Hello, world?");
@@ -68,7 +66,8 @@ void setup()
     // pinMode(txPin, OUTPUT);
 
     // dog.placing_legs();
-    dog.stand_up6();
+
+    dog.stand_up7(180, 0);
     delay(2000);
     // dog.stand_up6();
     // delay(2000);
@@ -77,7 +76,7 @@ void setup()
 void loop()
 {
     // dog.stand_up7();
-    dog.avance();
+    // dog.avance();
     // dog.move_leg2(0);
     // dog.stand_up7();
     // delay(1000);

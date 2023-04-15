@@ -30,6 +30,7 @@
 #include "CustomServo/CustomServo.h"
 #include "Accelerometer/Accelerometer.h"
 #include "Leg/Leg.h"
+#include "maths.hpp"
 
 /**
  * A {@code CustomServo} object allows you to control the PolyDog robot and move it around.
@@ -64,7 +65,7 @@ public:
     void stand_up4();
     void stand_up5();
     void stand_up6();
-    void stand_up7();
+    void stand_up7(double AG, double EG);
     void stand_up8();
 
     void orientation(int AccX, int AccY);

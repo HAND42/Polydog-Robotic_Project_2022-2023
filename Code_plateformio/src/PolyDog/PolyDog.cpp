@@ -133,7 +133,7 @@ void PolyDog::stand_up6()
 {
     for (int i = 0; i < 4; i++)
     {
-        leg_list[i].move_hip(130);
+        leg_list[i].move_hip(140);
         leg_list[i].move_knee(40);
     }
     delay(1000);
@@ -147,16 +147,18 @@ void PolyDog::stand_up6()
     this->hold_shoulders();
     delay(1000);
 }
-void PolyDog::stand_up7()
+void PolyDog::stand_up7(double AG, double EG)
 {
-    leg_list[0].move_knee(80);
-    leg_list[0].move_hip(90);
-    leg_list[2].move_knee(80);
-    leg_list[2].move_hip(90);
-    leg_list[1].move_knee(125);
-    leg_list[1].move_hip(115);
-    leg_list[3].move_knee(125);
-    leg_list[3].move_hip(115);
+    double ha, ka;
+    get_angle_simplified(AG, EG, ha, ka);
+    get_coordonate_E_simplified(ha, ka, AG, EG);
+    Serial.println(AG);
+    Serial.println(EG);
+    for (int i = 0; i < 4; i++)
+    {
+        leg_list[i].move_hip(ha);
+        leg_list[i].move_knee(ka);
+    }
 
     this->hold_shoulders();
 }
