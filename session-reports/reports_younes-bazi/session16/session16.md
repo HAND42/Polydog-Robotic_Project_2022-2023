@@ -2,7 +2,7 @@
 ## Date: 21/03/2023
 ## Main event of the session: Building The Robot in CoppeliaSim V-rep and Optimizing Development Time with Open-Source Simulation Code for The Polydog. 
 
-# Assembly of Polydog Robot Using Joints  
+# Assembly of the Polydog Using Joints  
 I started this session by importing all the individual parts of the Polydog from Onshape. The decision to import the parts one by one was made to avoid any complications with the joints, which I planned to add later during the assembly process. This method, although time-consuming, ensured that I had full control over the placement and configuration of each component. After importing all the parts, I began the task of assembling the Polydog using joints. This process was intricate and took a considerable amount of time due to the complexity of the robot's design. I carefully aligned each part and created joints to connect them accurately. As I progressed through the assembly, I made sure to test the functionality and mobility of the joints to ensure smooth operation.  
 ![Alt text](S16/Capture%20d%E2%80%99%C3%A9cran%202023-04-17%20033843.png)   
 
