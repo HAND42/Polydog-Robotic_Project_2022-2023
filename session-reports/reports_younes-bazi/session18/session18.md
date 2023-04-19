@@ -1,6 +1,6 @@
 # SESSION 18 OUTCOME REPORT
 ## Date: 04/04/2023
-## Main event of the session: Successfully Achieving Our Goal: Making Our Robot Walk in Simulation.    
+## Main event of the session: Unleashing the Polydog's Potential: Enhancing Model and Achieving In-Place Maneuvers in CoppeliaSim.      
 During this session, my main focus was on improving the 3D model of the Polydog in CoppeliaSim to closely resemble our physical robot dog, in order to achieve a simulation that closely mimics reality. This is crucial as CoppeliaSim will eventually control our robot using ROS, and having a simulation that closely matches our real robot will ensure smooth movement and walking in the simulation and the reality. I spent time redesigning the robot in CoppeliaSim until it looked similar to our real robot.  
 Old Version :  
 ![Alt text](S18/Capture%20d%E2%80%99%C3%A9cran%202023-04-19%20034605.png)  
