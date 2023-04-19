@@ -99,5 +99,15 @@ I also managed to program the robot to perform new in-place maneuvers using the 
         `sim.wait(3)`  
     `end`  
 `end`   
-The moveBody function generates in-place maneuvers for the robot dog in CoppeliaSim by adjusting its position and orientation, and then using the sim.moveToPosition function to move the robot to the desired position and orientation with specified velocity and acceleration parameters.  
+The moveBody function generates in-place maneuvers for the robot dog in CoppeliaSim by adjusting its position and orientation, and then using the sim.moveToPosition function to move the robot to the desired position and orientation with specified velocity and acceleration parameters.     
 Here are the results:  
+UP AND DOWN  
+![Alt text](S18/Up%20and%20Down.gif)  
+ROLLING (Rotational motion around the robot's longitudinal axis (X-axis))  
+![Alt text](S18/Rolling.gif)  
+PITCHING (Rotational motion around the robot's lateral axis (Y-axis))   
+![Alt text](S18/Pitching.gif)  
+YAWING  (rotational motion around the robot's vertical axis (Z-axis))
+![Alt text](S18/Yawing.gif)  
+4x TWISTING  
+![Alt text](S18/Twisting.gif)
