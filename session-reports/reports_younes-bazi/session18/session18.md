@@ -104,7 +104,7 @@ Here are the results:
 UP AND DOWN  
 ![Alt text](S18/Up%20and%20Down.gif)    
 ROLLING (Rotational motion around the robot's longitudinal axis (X-axis))    
-![Alt text](S18/Rolling.gif    
+![Alt text](S18/Rolling.gif)    
 PITCHING (Rotational motion around the robot's lateral axis (Y-axis))     
 ![Alt text](S18/Pitching.gif)    
 YAWING  (rotational motion around the robot's vertical axis (Z-axis))  
