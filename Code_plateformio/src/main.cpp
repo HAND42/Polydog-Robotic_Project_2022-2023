@@ -67,9 +67,9 @@ void setup()
 
     // dog.placing_legs();
 
-    dog.stand_up7(180, 0);
+    // dog.stand_up7(180, 0);
     delay(2000);
-    // dog.stand_up6();
+    dog.stand_up6();
     // delay(2000);
     // dog.moving_shoulders();
 }
