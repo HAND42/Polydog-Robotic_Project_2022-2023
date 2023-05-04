@@ -76,7 +76,7 @@ void setup()
 void loop()
 {
     // dog.stand_up7();
-    // dog.avance();
+    dog.avance();
     // dog.move_leg2(0);
     // dog.stand_up7();
     // delay(1000);

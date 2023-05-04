@@ -78,8 +78,8 @@ public:
      */
 
     // Constants for LEG A
-    int OFFSET_KNEE_A = 10; // 10
-    int OFFSET_HIP_A = 4;
+    int OFFSET_KNEE_A = 0; // 10
+    int OFFSET_HIP_A = -4;
     int ANGLE_MIN_SHOULDER_A = 190; // 160
     int ANGLE_MAX_SHOULDER_A = 10;  // -15
     CustomServo SERVO_SHOULDER_A = CustomServo(19);
