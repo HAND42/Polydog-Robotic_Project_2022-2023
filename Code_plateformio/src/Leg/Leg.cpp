@@ -84,13 +84,13 @@ Leg::Leg(int leg_number)
  * @param angle the angle wanted for the servo
  * @author ANJOU Raphael
  */
-void Leg::move_knee(int angle, int offset)
-{
-    // _knee_servo.write(abs(_knee_offset - angle));
-    _knee_servo.write(abs(offset - angle));
-}
 
 void Leg::move_knee(int angle)
+{
+    _knee_servo.write(abs(_knee_offset - angle));
+}
+
+void Leg::move_knee_ms(int angle)
 {
     _knee_servo.write(abs(_knee_offset - angle));
 }
@@ -104,15 +104,15 @@ void Leg::move_knee(int angle)
  * @param angle the angle wanted for the servo
  * @author ANJOU Raphael
  */
-void Leg::move_hip(int angle, int offset)
-{
-    // _hip_servo.write(abs(_hip_offset - angle));
-    _hip_servo.write(abs(offset - angle));
-}
 
 void Leg::move_hip(int angle)
 {
     _hip_servo.write(abs(_hip_offset - angle));
+}
+
+void Leg::move_hip_ms(int angle)
+{
+    _hip_servo.write_ms(abs(_hip_offset - angle));
 }
 
 /**
@@ -127,6 +127,11 @@ void Leg::move_hip(int angle)
  * @author ANJOU Raphael
  */
 void Leg::move_shoulder(int angle)
+{
+    _shoulder_servo.write(map(angle, 0, 180, _ANGLE_MIN_SHOULDER, _ANGLE_MAX_SHOULDER));
+}
+
+void Leg::move_shoulder_ms(int angle)
 {
     _shoulder_servo.write(map(angle, 0, 180, _ANGLE_MIN_SHOULDER, _ANGLE_MAX_SHOULDER));
 }

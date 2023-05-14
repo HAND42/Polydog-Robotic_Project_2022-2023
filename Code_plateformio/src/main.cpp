@@ -67,25 +67,25 @@ void setup()
 
     // dog.placing_legs();
 
-    // dog.stand_up7(180, 0);
+    dog.stand_up7(192.87425, 46.455);
     delay(2000);
-    dog.stand_up6();
+    // dog.stand_up6();
     // delay(2000);
     // dog.moving_shoulders();
 }
 void loop()
 {
-    // dog.stand_up7();
-    dog.avance();
-    // dog.move_leg2(0);
-    // dog.stand_up7();
-    // delay(1000);
-    // dog.move_leg2(1);
-    // delay(1000);
-    // dog.move_leg(2);
-    // delay(1000);
-    // dog.move_leg(3);
-    // delay(1000);
+    // dog.stand_up4();
+    // dog.avance();
+    //  dog.move_leg2(0);
+    //  dog.stand_up7();
+    //  delay(1000);
+    //  dog.move_leg2(1);
+    //  delay(1000);
+    //  dog.move_leg(2);
+    //  delay(1000);
+    //  dog.move_leg(3);
+    //  delay(1000);
 
     // dog.move_2leg(2,0);
     // delay(1000);

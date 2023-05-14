@@ -150,17 +150,24 @@ void PolyDog::stand_up6()
 void PolyDog::stand_up7(double AG, double EG)
 {
     double ha, ka;
-    get_angle_simplified(AG, EG, ha, ka);
-    get_coordonate_E_simplified(ha, ka, AG, EG);
-    Serial.println(AG);
-    Serial.println(EG);
-    for (int i = 0; i < 4; i++)
-    {
-        leg_list[i].move_hip(ha);
-        leg_list[i].move_knee(ka);
-    }
+    Coord coord;
+    coord.x = 0;
+    coord.y = EG;
+    coord.z = AG;
+    get_angle_simplified(coord, ha, ka);
+    get_coordonate_E_simplified(ha, ka, coord);
+    Serial.println(ka);
+    Serial.println(ha);
+    Serial.println(coord.y);
+    Serial.println(coord.z);
 
-    this->hold_shoulders();
+    // for (int i = 0; i < 4; i++)
+    // {
+    //     leg_list[i].move_hip(ha);
+    //     leg_list[i].move_knee(ka);
+    // }
+
+    // this->hold_shoulders();
 }
 
 /**

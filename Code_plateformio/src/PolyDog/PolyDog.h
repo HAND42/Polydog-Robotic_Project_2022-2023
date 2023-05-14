@@ -30,7 +30,7 @@
 #include "CustomServo/CustomServo.h"
 #include "Accelerometer/Accelerometer.h"
 #include "Leg/Leg.h"
-#include "maths.hpp"
+#include "Maths/maths.hpp"
 
 /**
  * A {@code CustomServo} object allows you to control the PolyDog robot and move it around.

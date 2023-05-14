@@ -53,24 +53,24 @@ public:
      * This method will move the knee servo to the correct angle by considering the offsets constants
      * @param angle The desired angle to move the servo to
      */
-    void move_knee(int angle, int offset);
 
     void move_knee(int angle);
+    void move_knee_ms(int angle);
 
     /**
      * This method will move the hip servo to the correct angle by considering the offsets constants
      * @param angle The desired angle to move the servo to
      */
-    void move_hip(int angle, int offset);
 
-    // TO REMOVE
     void move_hip(int angle);
+    void move_hip_ms(int angle);
 
     /**
      * This method will move the shoulder servo to the correct angle by considering the min and max constants
      * @param angle The desired angle to move the servo to
      */
     void move_shoulder(int angle);
+    void move_shoulder_ms(int angle);
 
     /*
      *size of the square formed by the feet when the robot is in neutral position:

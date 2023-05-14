@@ -55,6 +55,7 @@ public:
      * @author DURAND Hugo
      */
     void write(int angle);
+    void write_ms(int angle);
     /**
      * This method manages the serial communication to move a servo motor.
      *
