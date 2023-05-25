@@ -10,6 +10,8 @@ OA = 46.5
 omega = math.acos((DE ** 2 + CD ** 2 - CE ** 2) /
                   (2 * CD * DE)) * math.degrees(1)
 
+print(omega)
+
 
 def get_coordonate_E_simplified(ha, ka):
     AG = 0.0
@@ -66,7 +68,7 @@ def get_angle_simplified(AG, EG):
     ha = (90 - little_phi - epsilon)
 
     alpha = math.acos((pow(DE, 2) + pow(DA, 2) - pow(EA, 2)
-                       ) / (2 * DA * EA)) * math.degrees(1)
+                       ) / (2 * DA * DE)) * math.degrees(1)
 
     if (EA >= 181.42434761668073):
         ka = (omega + alpha - 180 - ha)

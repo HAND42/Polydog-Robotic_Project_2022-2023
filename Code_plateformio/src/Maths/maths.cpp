@@ -21,8 +21,8 @@ void get_coordonate_E_simplified(double ha, double ka, Coord &coord)
     double alpha = (gamma + 90);
     double AH = sqrt(DH * DH + DA * DA - 2 * DA * DH * cos(alpha * PI / 180));
     double little_phi = acos((-DH * DH + DA * DA + AH * AH) / (2 * DA * AH)) * 180 / PI;
-    coord.y = round(sin((beta - little_phi) * PI / 180) * AH);
-    coord.z = round(cos((beta - little_phi) * PI / 180) * AH) + HE;
+    coord.y = round(sin(abs(beta - little_phi) * PI / 180) * AH);
+    coord.z = round(cos(abs(beta - little_phi) * PI / 180) * AH) + HE;
 }
 
 // void get_coordonate_E(double ha, double ka, double sa, double &x, double &y, double &z)
@@ -50,9 +50,6 @@ void get_angle_simplified(Coord &coord, double &hanche_angle, double &knew_angle
     double AG = abs(coord.z);
     double EG = abs(coord.y);
 
-    Serial.println(AG);
-    Serial.println(EG);
-
     // False_AG is the height but without taking into account the squash ball distance
     float false_AG = AG - HE;
 
@@ -70,7 +67,7 @@ void get_angle_simplified(Coord &coord, double &hanche_angle, double &knew_angle
     double little_phi = acos((-DH * DH + DA * DA + HA * HA) / (2 * DA * HA)) * 180 / PI; // Why M_PI and not PI
     Serial.println("little_phi" + String(little_phi));
 
-    if (coord.y >= 0)
+    if (coord.y <= 0)
     {
         hanche_angle = (90 - little_phi - epsilon);
     }
@@ -79,18 +76,27 @@ void get_angle_simplified(Coord &coord, double &hanche_angle, double &knew_angle
         hanche_angle = (90 - little_phi + epsilon);
     }
 
-    double alpha = acos((DH * DH + DA * DA - HA * HA) / (2 * DA * HA)) * 180 / PI;
+    double alpha = acos((DH * DH + DA * DA - HA * HA) / (2 * DA * DH)) * 180 / PI;
 
     Serial.println("alpha" + String(alpha));
 
-    if (HA >= 181.42434761668073)
+    if (alpha >= 90)
     {
         knew_angle = (omega + alpha - 180 - hanche_angle);
     }
     else
     {
-        knew_angle = (omega - alpha - hanche_angle);
+        knew_angle = (omega + alpha - 180 - hanche_angle);
     }
+
+    // if (HA >= 181.42434761668073)
+    // {
+    //     knew_angle = (omega + alpha - 180 - hanche_angle);
+    // }
+    // else
+    // {
+    //     knew_angle = (omega - alpha - hanche_angle);
+    // }
 
     hanche_angle = round(hanche_angle);
     knew_angle = round(knew_angle);
