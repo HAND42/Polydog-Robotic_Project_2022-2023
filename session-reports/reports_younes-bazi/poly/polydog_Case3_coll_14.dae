@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Assimp</author>
+      <authoring_tool>Assimp Exporter</authoring_tool>
+    </contributor>
+    <created>2023-09-29T06:57:10</created>
+    <modified>2023-09-29T06:57:10</modified>
+    <unit name="meter" meter="1" />
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="m0mat-fx" name="m0mat">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   9.486790603479012e-43</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">1   1   1   4.591354418360263e-41</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">1   1   1   4.591354418360263e-41</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">1   1   1   0</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="m0mat" name="m0mat">
+      <instance_effect url="#m0mat-fx"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="meshId0" name="meshId0_name" >
+      <mesh>
+        <source id="meshId0-positions" name="meshId0-positions">
+          <float_array id="meshId0-positions-array" count="144"> 2.912384271621704 -5.33133602142334 0.2072678804397583 2.898191452026367 -5.300352573394775 0.2075649946928024 2.897572994232178 -5.331037998199463 0.2075306326150894 2.903740406036377 -5.332772254943848 0.2051908373832703 2.912384271621704 -5.33133602142334 0.2072678804397583 2.897572994232178 -5.331037998199463 0.2075306326150894 2.912439584732056 -5.301756858825684 0.2072335034608841 2.898191452026367 -5.300352573394775 0.2075649946928024 2.912384271621704 -5.33133602142334 0.2072678804397583 2.912439584732056 -5.301756858825684 0.2072335034608841 2.912384271621704 -5.33133602142334 0.2072678804397583 2.912983894348145 -5.300649166107178 0.206244170665741 2.912439584732056 -5.301756858825684 0.2072335034608841 2.912983894348145 -5.300649166107178 0.206244170665741 2.898191452026367 -5.300352573394775 0.2075649946928024 2.912384271621704 -5.33133602142334 0.2072678804397583 2.912365674972534 -5.331334590911865 0.2062098234891891 2.912983894348145 -5.300649166107178 0.206244170665741 2.903740406036377 -5.332772254943848 0.2051908373832703 2.912365674972534 -5.331334590911865 0.2062098234891891 2.912384271621704 -5.33133602142334 0.2072678804397583 2.903740406036377 -5.332772254943848 0.2051908373832703 2.912983894348145 -5.300649166107178 0.206244170665741 2.912365674972534 -5.331334590911865 0.2062098234891891 2.903740406036377 -5.332772254943848 0.2051908373832703 2.904504060745239 -5.300477504730225 0.2053362131118774 2.912983894348145 -5.300649166107178 0.206244170665741 2.898662090301514 -5.301455974578857 0.2055138349533081 2.904504060745239 -5.300477504730225 0.2053362131118774 2.903740406036377 -5.332772254943848 0.2051908373832703 2.904504060745239 -5.300477504730225 0.2053362131118774 2.898191452026367 -5.300352573394775 0.2075649946928024 2.912983894348145 -5.300649166107178 0.206244170665741 2.898662090301514 -5.301455974578857 0.2055138349533081 2.898191452026367 -5.300352573394775 0.2075649946928024 2.904504060745239 -5.300477504730225 0.2053362131118774 2.898087978363037 -5.329949855804443 0.2054819315671921 2.903740406036377 -5.332772254943848 0.2051908373832703 2.897572994232178 -5.331037998199463 0.2075306326150894 2.898087978363037 -5.329949855804443 0.2054819315671921 2.898662090301514 -5.301455974578857 0.2055138349533081 2.903740406036377 -5.332772254943848 0.2051908373832703 2.898087978363037 -5.329949855804443 0.2054819315671921 2.897572994232178 -5.331037998199463 0.2075306326150894 2.898191452026367 -5.300352573394775 0.2075649946928024 2.898087978363037 -5.329949855804443 0.2054819315671921 2.898191452026367 -5.300352573394775 0.2075649946928024 2.898662090301514 -5.301455974578857 0.2055138349533081 </float_array>
+          <technique_common>
+            <accessor count="48" offset="0" source="#meshId0-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId0-vertices">
+          <input semantic="POSITION" source="#meshId0-positions" />
+        </vertices>
+        <polylist count="16" material="defaultMaterial">
+          <input offset="0" semantic="VERTEX" source="#meshId0-vertices" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Node_000002A5B508B500"  name="Node_000002A5B508B500" type="NODE">
+        <matrix sid="matrix">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#meshId0">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="defaultMaterial" target="#m0mat">
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene" />
+  </scene>
+</COLLADA>

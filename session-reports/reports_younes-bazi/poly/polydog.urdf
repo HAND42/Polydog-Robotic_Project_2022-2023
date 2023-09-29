@@ -1,0 +1,1759 @@
+<?xml version="1.0"?>
+<robot name="Body">
+    <link name="robot_base">
+        <inertial>
+            <origin rpy="-0.000000 -1.570796 0.000000" xyz="3.085511 -5.252829 0.187957" />
+            <inertia ixz="1.6089393589153e-05" iyz="-0.00022444305582477" ixy="-9.2003324889779e-06" ixx="0.042153030412219" izz="0.0070709197939428" iyy="0.035836070888816" />
+            <mass value="2.4" />
+        </inertial>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_15.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_16.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_17.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_18.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_19.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_20.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_21.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_22.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_23.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_24.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_25.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_26.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_27.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_28.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_29.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_30.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_31.dae" />
+            </geometry>
+        </collision>
+        <collision name="Body">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_robot_base_coll_32.dae" />
+            </geometry>
+        </collision>
+        <visual name="Body_visual">
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.000000 -0.000000 -0.000000" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Bodyvisual_vis_1.dae" />
+            </geometry>
+            <material name="Bodyvisual_material">
+                <color rgba="0.490000 0.680000 0.980000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Shoulder4">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="robot_base" />
+        <child link="Case4" />
+        <origin rpy="3.078568 1.588567 -0.083163" xyz="2.955599 -5.173379 0.196405" />
+    </joint>
+    <link name="Case4">
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case4">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case4_coll_15.dae" />
+            </geometry>
+        </collision>
+        <visual name="CaseD">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.055163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_CaseD_vis_1.dae" />
+            </geometry>
+            <material name="CaseD_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Hip4">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="Case4" />
+        <child link="Femur4" />
+        <origin rpy="1.570796 -1.570796 0.000000" xyz="-0.000000 0.005000 0.021000" />
+    </joint>
+    <link name="Femur4">
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_15.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_16.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_17.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur4_coll_18.dae" />
+            </geometry>
+        </collision>
+        <visual name="FemurD">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.034163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_FemurD_vis_1.dae" />
+            </geometry>
+            <material name="FemurD_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Knee4">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="Femur4" />
+        <child link="Tibia4" />
+        <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.078146 -0.104211 0.032297" />
+    </joint>
+    <link name="Tibia4">
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_15.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_16.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_17.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_18.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_19.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_20.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_21.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_22.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_23.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_24.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_25.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_26.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia4">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia4_coll_27.dae" />
+            </geometry>
+        </collision>
+        <visual name="TibiaC">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_TibiaC_vis_1.dae" />
+            </geometry>
+            <material name="TibiaC_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Shoulder1">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="robot_base" />
+        <child link="Case1" />
+        <origin rpy="3.078568 1.588567 -0.083163" xyz="3.193513 -5.178169 0.192184" />
+    </joint>
+    <link name="Case1">
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case1">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case1_coll_15.dae" />
+            </geometry>
+        </collision>
+        <visual name="CaseA">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.112559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_CaseA_vis_1.dae" />
+            </geometry>
+            <material name="CaseA_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Hip1">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="Case1" />
+        <child link="Femur1" />
+        <origin rpy="1.570796 -1.570796 0.000000" xyz="-0.000000 0.005000 -0.041000" />
+    </joint>
+    <link name="Femur1">
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_15.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_16.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_17.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur1_coll_18.dae" />
+            </geometry>
+        </collision>
+        <visual name="FemurA">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.117559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_FemurA_vis_1.dae" />
+            </geometry>
+            <material name="FemurA_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Knee1">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="Femur1" />
+        <child link="Tibia1" />
+        <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.078146 -0.104211 0.032297" />
+    </joint>
+    <link name="Tibia1">
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_15.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_16.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_17.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_18.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_19.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_20.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_21.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_22.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_23.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_24.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_25.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_26.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia1">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia1_coll_27.dae" />
+            </geometry>
+        </collision>
+        <visual name="TibiaA">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.256017 -0.152137 5.085262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_TibiaA_vis_1.dae" />
+            </geometry>
+            <material name="TibiaA_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Shoulder3">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="robot_base" />
+        <child link="Case3" />
+        <origin rpy="3.078568 1.588567 -0.083163" xyz="2.950617 -5.321309 0.196275" />
+    </joint>
+    <link name="Case3">
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case3">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case3_coll_15.dae" />
+            </geometry>
+        </collision>
+        <visual name="CaseC">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.053163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_CaseC_vis_1.dae" />
+            </geometry>
+            <material name="CaseC_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Hip3">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="Case3" />
+        <child link="Femur3" />
+        <origin rpy="1.570796 -1.570796 0.000000" xyz="-0.000000 0.005000 0.021000" />
+    </joint>
+    <link name="Femur3">
+        <collision name="Femur3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur3_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur3_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur3_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur3_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur3_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur3_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur3_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur3_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur3_coll_9.dae" />
+            </geometry>
+        </collision>
+        <visual name="FemurC">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.032163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_FemurC_vis_1.dae" />
+            </geometry>
+            <material name="FemurC_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Knee3">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="Femur3" />
+        <child link="Tibia3" />
+        <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.076146 -0.104211 -0.023703" />
+    </joint>
+    <link name="Tibia3">
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_15.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_16.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_17.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_18.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_19.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_20.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_21.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_22.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_23.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_24.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_25.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_26.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia3">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia3_coll_27.dae" />
+            </geometry>
+        </collision>
+        <visual name="TibiaC">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="2.956017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_TibiaC_vis_1.dae" />
+            </geometry>
+            <material name="TibiaC_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Shoulder2">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="robot_base" />
+        <child link="Case2" />
+        <origin rpy="3.078568 1.588567 -0.083163" xyz="3.190531 -5.326139 0.192018" />
+    </joint>
+    <link name="Case2">
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Case2">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Case2_coll_15.dae" />
+            </geometry>
+        </collision>
+        <visual name="CaseB">
+            <origin rpy="-2.293142 1.597623 0.849748" xyz="0.256347 -5.260559 3.293163" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_CaseB_vis_1.dae" />
+            </geometry>
+            <material name="CaseB_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Hip2">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="Case2" />
+        <child link="Femur2" />
+        <origin rpy="1.570796 -1.570796 0.000000" xyz="-0.000000 0.005000 -0.041000" />
+    </joint>
+    <link name="Femur2">
+        <collision name="Femur2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur2_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur2_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur2_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur2_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur2_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur2_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur2_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur2_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Femur2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Femur2_coll_9.dae" />
+            </geometry>
+        </collision>
+        <visual name="FemurB">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.334163 -0.256348 5.265559" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_FemurB_vis_1.dae" />
+            </geometry>
+            <material name="FemurB_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Knee2">
+        <axis xyz="0 0 1" />
+        <limit velocity="6.2831854820251" lower="-3.1415927410126" effort="2.5" upper="3.1415927410126" />
+        <parent link="Femur2" />
+        <child link="Tibia2" />
+        <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.076146 -0.104211 -0.023703" />
+    </joint>
+    <link name="Tibia2">
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_4.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_5.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_6.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_7.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_8.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_9.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_10.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_11.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_12.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_13.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_14.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_15.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_16.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_17.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_18.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_19.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_20.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_21.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_22.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_23.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_24.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_25.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_26.dae" />
+            </geometry>
+        </collision>
+        <collision name="Tibia2">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_Tibia2_coll_27.dae" />
+            </geometry>
+        </collision>
+        <visual name="TibiaB">
+            <origin rpy="-1.571916 3.161741 -0.017712" xyz="3.258017 -0.152137 5.289262" />
+            <geometry>
+                <mesh filename="file://C:/Users/hp/Desktop/poly/polydog_TibiaB_vis_1.dae" />
+            </geometry>
+            <material name="TibiaB_material">
+                <color rgba="0.000000 0.000000 0.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+</robot>
