@@ -1,0 +1,1208 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='box'>
+      <static>1</static>
+      <pose>1 1 0 0 0.1 0</pose>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 0.5 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 0.5 0.1</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='polydog'>
+      <link name='dummy0'>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>3.56828</mass>
+          <inertia>
+            <ixx>0.01664</ixx>
+            <ixy>2.083e-06</ixy>
+            <ixz>7.089e-06</ixz>
+            <iyy>0.01339</iyy>
+            <iyz>-1.299e-05</iyz>
+            <izz>0.00358</izz>
+          </inertia>
+        </inertial>
+        <collision name='dummy0_fixed_joint_lump__body_collision'>
+          <pose>0 0 0 3.14159 -1.57079 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/body_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='dummy0_fixed_joint_lump__body_visual'>
+          <pose>0 0 0 3.14159 -1.57079 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/body.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='FL1_joint' type='revolute'>
+        <pose relative_to='dummy0'>0.084 -0.122 0 1.5708 -0 0</pose>
+        <parent>dummy0</parent>
+        <child>case2</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='case2'>
+        <pose relative_to='FL1_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.189739</mass>
+          <inertia>
+            <ixx>0.00148</ixx>
+            <ixy>-4.937e-06</ixy>
+            <ixz>4.053e-09</ixz>
+            <iyy>0.00148</iyy>
+            <iyz>4.698e-07</iyz>
+            <izz>0.00025</izz>
+          </inertia>
+        </inertial>
+        <collision name='case2_collision'>
+          <pose>0 0 0 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/case_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='case2_visual'>
+          <pose>0 0 0 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/case.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='FL2_joint' type='revolute'>
+        <pose relative_to='case2'>0.035 0 0.018 -0.001593 0.001593 3.14159</pose>
+        <parent>case2</parent>
+        <child>femur2</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='femur2'>
+        <pose relative_to='FL2_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.18042</mass>
+          <inertia>
+            <ixx>0.00198</ixx>
+            <ixy>6.247e-05</ixy>
+            <ixz>-9.408e-06</ixz>
+            <iyy>0.00028</iyy>
+            <iyz>0.00024</iyz>
+            <izz>0.00182</izz>
+          </inertia>
+        </inertial>
+        <collision name='femur2_collision'>
+          <pose>0 0.054 -0.008 -0.15 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/femur_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='femur2_visual'>
+          <pose>0 0.054 -0.008 -0.15 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/femur.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='FL3_joint' type='revolute'>
+        <pose relative_to='femur2'>-0.0075 0.129 0.0015 1.57 -0 0</pose>
+        <parent>femur2</parent>
+        <child>tibia2</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='tibia2'>
+        <pose relative_to='FL3_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00019 -0.00223 -0.01482 0 -0 0</pose>
+          <mass>0.083449</mass>
+          <inertia>
+            <ixx>0.00219</ixx>
+            <ixy>3.703e-07</ixy>
+            <ixz>4.672e-06</ixz>
+            <iyy>0.00214</iyy>
+            <iyz>2.869e-05</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+        <collision name='tibia2_collision'>
+          <pose>0.004 -0.004 -0.04 0 0.05 -0.7</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/tibia_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='tibia2_visual'>
+          <pose>0.004 -0.004 -0.04 0 0.05 -0.7</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/tibia.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='FR1_joint' type='revolute'>
+        <pose relative_to='dummy0'>-0.084 -0.122 0 1.5708 -0 3.14</pose>
+        <parent>dummy0</parent>
+        <child>case3</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='case3'>
+        <pose relative_to='FR1_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.189739</mass>
+          <inertia>
+            <ixx>0.00148</ixx>
+            <ixy>-4.937e-06</ixy>
+            <ixz>4.053e-09</ixz>
+            <iyy>0.00148</iyy>
+            <iyz>4.698e-07</iyz>
+            <izz>0.00025</izz>
+          </inertia>
+        </inertial>
+        <collision name='case3_collision'>
+          <pose>0 0 0 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/case_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='case3_visual'>
+          <pose>0 0 0 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/case.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='FR2_joint' type='revolute'>
+        <pose relative_to='case3'>0.035 0 -0.018 -0.001593 0.001593 3.14159</pose>
+        <parent>case3</parent>
+        <child>femur3</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='femur3'>
+        <pose relative_to='FR2_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.18042</mass>
+          <inertia>
+            <ixx>0.00198</ixx>
+            <ixy>6.247e-05</ixy>
+            <ixz>-9.408e-06</ixz>
+            <iyy>0.00028</iyy>
+            <iyz>0.00024</iyz>
+            <izz>0.00182</izz>
+          </inertia>
+        </inertial>
+        <collision name='femur3_collision'>
+          <pose>0 0.054 -0.008 -0.15 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/femur_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='femur3_visual'>
+          <pose>0 0.054 -0.008 -0.15 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/femur.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='FR3_joint' type='revolute'>
+        <pose relative_to='femur3'>-0.0075 0.129 0.0015 -1.57159 0.001593 -3.14159</pose>
+        <parent>femur3</parent>
+        <child>tibia3</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='tibia3'>
+        <pose relative_to='FR3_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00019 -0.00223 -0.01482 0 -0 0</pose>
+          <mass>0.083449</mass>
+          <inertia>
+            <ixx>0.00219</ixx>
+            <ixy>3.703e-07</ixy>
+            <ixz>4.672e-06</ixz>
+            <iyy>0.00214</iyy>
+            <iyz>2.869e-05</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+        <collision name='tibia3_collision'>
+          <pose>0.004 -0.004 -0.04 0 0.05 -0.7</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/tibia_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='tibia3_visual'>
+          <pose>0.004 -0.004 -0.04 0 0.05 -0.7</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/tibia.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RL1_joint' type='revolute'>
+        <pose relative_to='dummy0'>0.084 0.122 0 1.5708 -0 0</pose>
+        <parent>dummy0</parent>
+        <child>case1</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='case1'>
+        <pose relative_to='RL1_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.189739</mass>
+          <inertia>
+            <ixx>0.00148</ixx>
+            <ixy>-4.937e-06</ixy>
+            <ixz>4.053e-09</ixz>
+            <iyy>0.00148</iyy>
+            <iyz>4.698e-07</iyz>
+            <izz>0.00025</izz>
+          </inertia>
+        </inertial>
+        <collision name='case1_collision'>
+          <pose>0 0 0 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/case_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='case1_visual'>
+          <pose>0 0 0 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/case.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RL2_joint' type='revolute'>
+        <pose relative_to='case1'>0.035 0 -0.018 0.001593 0.001593 3.14159</pose>
+        <parent>case1</parent>
+        <child>femur1</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='femur1'>
+        <pose relative_to='RL2_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.18042</mass>
+          <inertia>
+            <ixx>0.00198</ixx>
+            <ixy>6.247e-05</ixy>
+            <ixz>-9.408e-06</ixz>
+            <iyy>0.00028</iyy>
+            <iyz>0.00024</iyz>
+            <izz>0.00182</izz>
+          </inertia>
+        </inertial>
+        <collision name='femur1_collision'>
+          <pose>0 0.054 -0.008 -0.15 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/femur_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='femur1_visual'>
+          <pose>0 0.054 -0.008 -0.15 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/femur.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RL3_joint' type='revolute'>
+        <pose relative_to='femur1'>-0.0075 0.129 0.0015 1.57 -0 0</pose>
+        <parent>femur1</parent>
+        <child>tibia1</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='tibia1'>
+        <pose relative_to='RL3_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00019 -0.00223 -0.01482 0 -0 0</pose>
+          <mass>0.083449</mass>
+          <inertia>
+            <ixx>0.00219</ixx>
+            <ixy>3.703e-07</ixy>
+            <ixz>4.672e-06</ixz>
+            <iyy>0.00214</iyy>
+            <iyz>2.869e-05</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+        <collision name='tibia1_collision'>
+          <pose>0.004 -0.004 -0.04 0 0.05 -0.7</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/tibia_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='tibia1_visual'>
+          <pose>0.004 -0.004 -0.04 0 0.05 -0.7</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/tibia.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RR1_joint' type='revolute'>
+        <pose relative_to='dummy0'>-0.084 0.122 0 1.5708 -0 3.14</pose>
+        <parent>dummy0</parent>
+        <child>case4</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='case4'>
+        <pose relative_to='RR1_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.189739</mass>
+          <inertia>
+            <ixx>0.00148</ixx>
+            <ixy>-4.937e-06</ixy>
+            <ixz>4.053e-09</ixz>
+            <iyy>0.00148</iyy>
+            <iyz>4.698e-07</iyz>
+            <izz>0.00025</izz>
+          </inertia>
+        </inertial>
+        <collision name='case4_collision'>
+          <pose>0 0 0 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/case_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='case4_visual'>
+          <pose>0 0 0 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/case.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RR2_joint' type='revolute'>
+        <pose relative_to='case4'>0.035 0 0.018 -0.001593 0.001593 3.14159</pose>
+        <parent>case4</parent>
+        <child>femur4</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='femur4'>
+        <pose relative_to='RR2_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.18042</mass>
+          <inertia>
+            <ixx>0.00198</ixx>
+            <ixy>6.247e-05</ixy>
+            <ixz>-9.408e-06</ixz>
+            <iyy>0.00028</iyy>
+            <iyz>0.00024</iyz>
+            <izz>0.00182</izz>
+          </inertia>
+        </inertial>
+        <collision name='femur4_collision'>
+          <pose>0 0.054 -0.008 -0.15 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/femur_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='femur4_visual'>
+          <pose>0 0.054 -0.008 -0.15 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/femur.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RR3_joint' type='revolute'>
+        <pose relative_to='femur4'>-0.0075 0.129 0.0015 -1.57159 0.001593 -3.14159</pose>
+        <parent>femur4</parent>
+        <child>tibia4</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>10</effort>
+            <velocity>6</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='tibia4'>
+        <pose relative_to='RR3_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00019 -0.00223 -0.01482 0 -0 0</pose>
+          <mass>0.083449</mass>
+          <inertia>
+            <ixx>0.00219</ixx>
+            <ixy>3.703e-07</ixy>
+            <ixz>4.672e-06</ixz>
+            <iyy>0.00214</iyy>
+            <iyz>2.869e-05</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+        <collision name='tibia4_collision'>
+          <pose>0.004 -0.004 -0.04 0 0.05 -0.7</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/tibia_collision.obj</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='tibia4_visual'>
+          <pose>0.004 -0.004 -0.04 0 0.05 -0.7</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/younes/polydog_ws/src/polydog_description/meshes/tibia.obj</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+        <robotNamespace>/polydog_controller</robotNamespace>
+      </plugin>
+      <static>0</static>
+      <plugin name='joint_state_publisher' filename='libgazebo_ros_joint_state_publisher.so'>
+        <robotNamespace>/polydog_controller</robotNamespace>
+        <jointName>FR1_joint, FR2_joint, FR3_joint, FL1_joint, FL2_joint, FL3_joint, RR1_joint, RR2_joint, RR3_joint, RL1_joint, RL2_joint, RL3_joint</jointName>
+        <updateRate>100</updateRate>
+      </plugin>
+      <pose>0 0 0 0 -0 0</pose>
+      <gazebo reference='body'>
+        <gravity>1</gravity>
+        <sensor name='imu_sensor' type='imu'>
+          <always_on>1</always_on>
+          <update_rate>100</update_rate>
+          <visualize>1</visualize>
+          <topic>__default_topic__</topic>
+          <plugin filename='libgazebo_ros_imu_sensor.so' name='imu_plugin'>
+            <topicName>polydog_imu/base_link_orientation</topicName>
+            <bodyName>imu_link</bodyName>
+            <updateRateHZ>15.0</updateRateHZ>
+            <gaussianNoise>0.0</gaussianNoise>
+            <xyzOffset>0 0 0</xyzOffset>
+            <rpyOffset>0 0 0</rpyOffset>
+            <frameName>base_link</frameName>
+            <initialOrientationAsReference>0</initialOrientationAsReference>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+      </gazebo>
+    </model>
+    <state world_name='default'>
+      <sim_time>31 649000000</sim_time>
+      <real_time>31 913278138</real_time>
+      <wall_time>1701867413 438537400</wall_time>
+      <iterations>31649</iterations>
+      <model name='box'>
+        <pose>1 1 0 0 0.1 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>1 1 0 0 0.1 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='polydog'>
+        <pose>0.237147 0.362117 0.205672 0.007832 -0.008797 0.184319</pose>
+        <scale>1 1 1</scale>
+        <link name='case1'>
+          <pose>0.297354 0.49744 0.207366 1.57864 -0.039468 0.184078</pose>
+          <velocity>-0.00287 0.012162 -0.008663 0.002833 0.013729 0.010732</velocity>
+          <acceleration>-1.89133 1.629 -10.9281 3.01121 1.07104 1.34841</acceleration>
+          <wrench>-0.358859 0.309085 -2.0735 0 -0 0</wrench>
+        </link>
+        <link name='case2'>
+          <pose>0.342088 0.257583 0.205455 1.57864 -0.044536 0.184038</pose>
+          <velocity>-0.000323 0.012645 -0.00996 -0.00092 0.033903 0.010952</velocity>
+          <acceleration>3.45199 2.6199 -10.3214 -2.17583 1.14791 2.21413</acceleration>
+          <wrench>0.654977 0.497097 -1.95837 0 -0 0</wrench>
+        </link>
+        <link name='case3'>
+          <pose>0.17694 0.226794 0.203977 1.56295 -0.028002 -2.95858</pose>
+          <velocity>-7.3e-05 0.010802 0.00059 0.002924 0.012801 0.010724</velocity>
+          <acceleration>3.98149 -1.25745 10.9394 -1.76343 1.16222 2.91657</acceleration>
+          <wrench>0.755445 -0.238587 2.07563 0 -0 0</wrench>
+        </link>
+        <link name='case4'>
+          <pose>0.132206 0.46665 0.205888 1.56295 -0.017969 -2.95866</pose>
+          <velocity>-0.002622 0.010315 0.001883 0.006126 -0.0045 0.010596</velocity>
+          <acceleration>-1.36496 -2.25317 10.3247 2.88167 -0.64613 0.740893</acceleration>
+          <wrench>-0.258986 -0.427514 1.959 0 -0 0</wrench>
+        </link>
+        <link name='dummy0'>
+          <pose>0.237147 0.362117 0.205672 0.007832 -0.008797 0.184319</pose>
+          <velocity>-0.001472 0.011482 -0.004037 -0.006293 0.062686 0.011137</velocity>
+          <acceleration>1.04418 0.184918 0.003361 -1.72404 -1.53646 -1.03706</acceleration>
+          <wrench>3.72591 0.659839 0.011993 0 -0 0</wrench>
+        </link>
+        <link name='femur1'>
+          <pose>0.328435 0.521535 0.208888 -2.39241 0.039453 -2.95911</pose>
+          <velocity>-0.003108 0.012492 -0.009024 -0.413717 -0.063165 -0.005967</velocity>
+          <acceleration>-2.41893 2.3287 -11.2167 -0.676082 -0.252987 -2.57878</acceleration>
+          <wrench>-0.436424 0.420144 -2.02371 0 -0 0</wrench>
+        </link>
+        <link name='femur2'>
+          <pose>0.379763 0.246287 0.206872 -2.18989 0.04452 -2.95915</pose>
+          <velocity>-0.000151 0.013055 -0.011231 -0.427779 -0.044893 -0.008186</velocity>
+          <acceleration>3.77272 3.4882 -11.9073 2.01419 0.029826 0.660251</acceleration>
+          <wrench>0.680674 0.629341 -2.14832 0 -0 0</wrench>
+        </link>
+        <link name='femur3'>
+          <pose>0.14581 0.202727 0.204816 -0.951337 0.028012 0.181423</pose>
+          <velocity>0.000196 0.010465 0.000919 -0.001071 0.012063 0.010859</velocity>
+          <acceleration>4.56174 -1.95245 12.4639 -1.7968 -0.791091 3.08063</acceleration>
+          <wrench>0.823029 -0.352261 2.24874 0 -0 0</wrench>
+        </link>
+        <link name='femur4'>
+          <pose>0.094523 0.477984 0.206658 -0.74975 0.017979 0.181342</pose>
+          <velocity>-0.002746 0.009911 0.001783 0.025113 -0.001014 0.010248</velocity>
+          <acceleration>-1.61659 -3.09051 10.2885 -2.56462 -1.11387 -2.44966</acceleration>
+          <wrench>-0.291664 -0.55759 1.85625 0 -0 0</wrench>
+        </link>
+        <link name='tibia1'>
+          <pose>0.322299 0.615419 0.120301 0.564489 0.039452 -2.95911</pose>
+          <velocity>0.003052 -0.024112 -0.048263 0.374589 0.082225 0.025607</velocity>
+          <acceleration>2.56745 -29.6855 -55.4789 -2.19306 -1.39373 -1.21872</acceleration>
+          <wrench>0.214251 -2.47722 -4.62966 0 -0 0</wrench>
+        </link>
+        <link name='tibia2'>
+          <pose>0.378407 0.320917 0.101382 0.825143 0.044519 -2.95915</pose>
+          <velocity>0.005208 -0.032066 -0.043233 0.525061 0.13057 0.034781</velocity>
+          <acceleration>5.54467 -34.9061 -50.4187 0.564177 0.325874 -2.82644</acceleration>
+          <wrench>0.462697 -2.91288 -4.20739 0 -0 0</wrench>
+        </link>
+        <link name='tibia3'>
+          <pose>0.121833 0.275717 0.100907 0.831308 -0.027086 -2.95887</pose>
+          <velocity>-0.001842 0.010086 0.001143 -0.101502 -0.00659 0.013592</velocity>
+          <acceleration>-7.88023 37.4509 55.2345 2.39924 -0.589479 0.376602</acceleration>
+          <wrench>-0.657598 3.12524 4.60927 0 -0 0</wrench>
+        </link>
+        <link name='tibia4'>
+          <pose>0.068401 0.570217 0.119997 0.571037 -0.016814 -2.95916</pose>
+          <velocity>-0.003595 0.011811 0.00408 -0.099165 -0.024002 0.01233</velocity>
+          <acceleration>-8.37867 27.1941 54.6189 -1.15462 0.140335 -1.79051</acceleration>
+          <wrench>-0.699192 2.26932 4.55789 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>1.83502 -1.33698 0.736544 0 0.275643 2.35619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>

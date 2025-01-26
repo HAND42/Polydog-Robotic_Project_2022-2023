@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+
+<robot name="polydog">
+
+  <!-- Define materials (optional) -->
+  <material name="grey">
+    <color rgba="0.5 0.5 0.5 1"/>
+  </material>
+  <material name="red">
+    <color rgba="0.2 1 0.2 1"/>
+  </material>
+  <!-- Define the body link -->
+
+  <link name="scanmatcher_frame">
+  </link>
+  <link name="dummy1">
+  </link>
+  <link name="dummy2">
+  </link>
+  <link name="dummy3">
+  </link>
+  <link name="dummy4">
+  </link>
+  <link name="body">
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/body.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 -1.5708 0"/>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/body_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 -1.5708 0"/>
+    </collision>
+    <inertial>
+       <mass value="3.568279"/>
+       <origin xyz="0 0 0"/>
+       <inertia ixx="+0.01664" ixy="+2.083e-06" ixz="+7.089e-06" iyy="+0.01339" iyz="-1.299e-05" izz="+0.00358"/>
+     </inertial>
+  </link>
+  
+    <link name="depth_camera_link">
+    <visual name="depth_camera">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.0235 0.08 0.015" />
+      </geometry>
+    </visual>
+    <collision name="depth_camera">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.0235 0.08 0.015" />
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.0" ixy="1e-6" ixz="1e-6" iyy="1.0" iyz="1e-6" izz="1.0" />
+    </inertial>
+  </link>
+  
+    <link name="imu_sensor_link">
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.02 0.02 0.02"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.02 0.02 0.02"/>
+            </geometry>
+        </visual>
+        <inertial>
+            <mass value="0.001" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="0.00000015" ixy="0" ixz="0" iyy="0.00000015" iyz="0" izz="0.00000015" />
+        </inertial>
+    </link>
+    
+  <!-- Define the femur link -->
+  <link name="case1">
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/case.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/case_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    </collision>
+    <inertial>
+      <mass value="0.189739"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="+0.00148" ixy="-4.937e-06" ixz="+4.053e-09" iyy="+0.00148" iyz="+4.698e-07" izz="+0.00025"/>
+    </inertial>
+  </link>
+  <link name="case2">
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/case.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/case_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    </collision>
+    <inertial>
+      <mass value="0.189739"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="+0.00148" ixy="-4.937e-06" ixz="+4.053e-09" iyy="+0.00148" iyz="+4.698e-07" izz="+0.00025"/>
+    </inertial>
+  </link>
+  <link name="case3">
+
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/case.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/case_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    </collision>
+    <inertial>
+      <mass value="0.189739"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="+0.00148" ixy="-4.937e-06" ixz="+4.053e-09" iyy="+0.00148" iyz="+4.698e-07" izz="+0.00025"/>
+    </inertial>
+  </link>
+  <link name="case4">
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/case.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/case_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    </collision>
+    <inertial>
+      <mass value="0.189739"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="+0.00148" ixy="-4.937e-06" ixz="+4.053e-09" iyy="+0.00148" iyz="+4.698e-07" izz="+0.00025"/>
+    </inertial>
+  </link>
+  <link name="femur4">
+
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/femur.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0.054 -0.008" rpy="-0.15 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/femur_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0.054 -0.008" rpy="-0.15 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.18042"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="+0.00198" ixy="+6.247e-05" ixz="-9.408e-06" iyy="+0.00028" iyz="+0.00024" izz="+0.00182"/>
+    </inertial>
+  </link>
+  <link name="femur3">
+
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/femur.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="red"/>
+      <origin xyz="0 0.054 -0.008" rpy="-0.15 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/femur_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0.054 -0.008" rpy="-0.15 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.18042"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="+0.00198" ixy="+6.247e-05" ixz="-9.408e-06" iyy="+0.00028" iyz="+0.00024" izz="+0.00182"/>
+    </inertial>
+  </link>
+  <link name="femur2">
+
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/femur.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="red"/>
+      <origin xyz="0 0.054 -0.008" rpy="-0.15 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/femur_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0.054 -0.008" rpy="-0.15 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.18042"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="+0.00198" ixy="+6.247e-05" ixz="-9.408e-06" iyy="+0.00028" iyz="+0.00024" izz="+0.00182"/>
+    </inertial>
+  </link>
+  <link name="femur1">
+
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/femur.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="red"/>
+      <origin xyz="0 0.054 -0.008" rpy="-0.15 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/femur_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0.054 -0.008" rpy="-0.15 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.18042"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="+0.00198" ixy="+6.247e-05" ixz="-9.408e-06" iyy="+0.00028" iyz="+0.00024" izz="+0.00182"/>
+    </inertial>
+  </link>
+  <link name="tibia1">
+
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/tibia.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+      <origin xyz="0.004 -0.004 -0.04" rpy="0 0.05 -0.7"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/tibia_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0.004 -0.004 -0.04" rpy="0 0.05 -0.7"/>
+    </collision>
+    <inertial>
+      <mass value="0.083449"/>
+      <origin xyz="-0.00019 -0.00223 -0.01482"/>
+      <inertia ixx="+0.00219" ixy="+3.703e-07" ixz="+4.672e-06" iyy="+0.00214" iyz="+2.869e-05" izz="+1.000e-04"/>
+    </inertial>
+  </link>
+  <link name="tibia2">
+
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/tibia.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+      <origin xyz="0.004 -0.004 -0.04" rpy="0 0.05 -0.7"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/tibia_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0.004 -0.004 -0.04" rpy="0 0.05 -0.7"/>
+    </collision>
+    <inertial>
+      <mass value="0.083449"/>
+      <origin xyz="-0.00019 -0.00223 -0.01482"/>
+      <inertia ixx="+0.00219" ixy="+3.703e-07" ixz="+4.672e-06" iyy="+0.00214" iyz="+2.869e-05" izz="+1.000e-04"/>
+    </inertial>
+  </link>
+  <link name="tibia3">
+
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/tibia.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+      <origin xyz="0.004 -0.004 -0.04" rpy="0 0.05 -0.7"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/tibia_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0.004 -0.004 -0.04" rpy="0 0.05 -0.7"/>
+    </collision>
+    <inertial>
+      <mass value="0.083449"/>
+      <origin xyz="-0.00019 -0.00223 -0.01482"/>
+      <inertia ixx="+0.00219" ixy="+3.703e-07" ixz="+4.672e-06" iyy="+0.00214" iyz="+2.869e-05" izz="+1.000e-04"/>
+    </inertial>
+  </link>
+  <link name="tibia4">
+
+    <visual>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/tibia.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+      <origin xyz="0.004 -0.004 -0.04" rpy="0 0.05 -0.7"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://polydog_description/meshes/tibia_collision.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0.004 -0.004 -0.04" rpy="0 0.05 -0.7"/>
+    </collision>
+    <inertial>
+      <mass value="0.083449"/>
+      <origin xyz="-0.00019 -0.00223 -0.01482"/>
+      <inertia ixx="+0.00219" ixy="+3.703e-07" ixz="+4.672e-06" iyy="+0.00214" iyz="+2.869e-05" izz="+1.000e-04"/>
+    </inertial>
+  </link>
+
+
+
+  <!-- Define the joints -->
+  <joint name="depth_camera_joint" type="fixed">
+    <axis xyz="0 0 0" />
+    <origin xyz="0 -0.197 0.0265" rpy="0 0 -1.57"/>
+    <parent link="body"/>
+    <child link="depth_camera_link"/>
+  </joint>
+  <joint name="imu_sensor_joint" type="fixed">
+    <axis xyz="0 0 0" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="body"/>
+    <child link="imu_sensor_link"/>
+  </joint>
+  <joint name="RL1_joint" type="revolute">
+    <axis xyz="0 0 1"  />
+    <limit effort="10" lower="-3" upper="+3" velocity="6" />
+    <parent link="body"/>
+    <child link="case1"/>
+    <origin xyz="0.084 0.122 0" rpy="1.5708 0 0"/>
+  </joint>
+  <joint name="FL1_joint" type="revolute">
+    <axis xyz="0 0 1"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="body"/>
+    <child link="case2"/>
+    <origin xyz="0.084 -0.122 0" rpy="1.5708 0 0"/>
+  </joint>
+  <joint name="FR1_joint" type="revolute">
+    <axis xyz="0 0 1"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="body"/>
+    <child link="case3"/>
+    <origin xyz="-0.084 -0.122 0" rpy="1.5708 0 3.14"/>
+  </joint>
+  <joint name="RR1_joint" type="revolute">
+    <axis xyz="0 0 1"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="body"/>
+    <child link="case4"/>
+    <origin xyz="-0.084 0.122 0" rpy="1.5708 0 3.14"/>
+  </joint>
+  <joint name="RR2_joint" type="revolute">
+    <axis xyz="1 0 0"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="case4"/>
+    <child link="femur4"/>
+    <origin xyz="0.035 0 0.018" rpy="3.14 3.14 0"/>
+  </joint>
+  <joint name="FR2_joint" type="revolute">
+    <axis xyz="1 0 0"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="case3"/>
+    <child link="femur3"/>
+    <origin xyz="0.035 0 -0.018" rpy="3.14 3.14 0"/>
+  </joint>
+  <joint name="FL2_joint" type="revolute">
+    <axis xyz="1 0 0"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="case2"/>
+    <child link="femur2"/>
+    <origin xyz="0.035 0 0.018" rpy="3.14 3.14 0"/>
+  </joint>
+  <joint name="RL2_joint" type="revolute">
+    <axis xyz="1 0 0"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="case1"/>
+    <child link="femur1"/>
+    <origin xyz="0.035 0 -0.018" rpy="-3.14 3.14 0"/>
+  </joint>
+  <joint name="RL3_joint" type="revolute">
+    <axis xyz="1 0 0"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="femur1"/>
+    <child link="tibia1"/>
+    <origin xyz="-0.0075 0.129 0.0015" rpy="1.57 0 0"/>
+  </joint>
+  <joint name="FL3_joint" type="revolute">
+    <axis xyz="1 0 0"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="femur2"/>
+    <child link="tibia2"/>
+    <origin xyz="-0.0075 0.129 0.0015" rpy="1.57 0 0"/>
+  </joint>
+  <joint name="FR3_joint" type="revolute">
+    <axis xyz="1 0 0"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="femur3"/>
+    <child link="tibia3"/>
+    <origin xyz="-0.0075 0.129 0.0015" rpy="1.57 3.14 0"/>
+  </joint>
+  <joint name="RR3_joint" type="revolute">
+    <axis xyz="1 0 0"  />
+    <limit effort="10" lower="-3" upper="3" velocity="6" />
+    <parent link="femur4"/>
+    <child link="tibia4"/>
+    <origin xyz="-0.0075 0.129 0.0015" rpy="1.57 3.14 0"/>
+  </joint>
+  <joint name="dummy0_to_body" type="fixed">
+    <parent link="scanmatcher_frame"/>
+    <child link="body"/>
+    <origin xyz="0 0 0.20" rpy="0 0 1.57"/>
+  </joint>
+  <joint name="tibia1_to_dummy1" type="fixed">
+    <parent link="tibia1"/>
+    <child link="dummy1"/>
+    <origin xyz="0 -0.017 -0.125" rpy="3.14 0 0"/>
+  </joint>
+  <joint name="tibia2_to_dummy2" type="fixed">
+    <parent link="tibia2"/>
+    <child link="dummy2"/>
+    <origin xyz="0 -0.017 -0.125" rpy="3.14 0 0"/>
+  </joint>
+  <joint name="tibia3_to_dummy3" type="fixed">
+    <parent link="tibia3"/>
+    <child link="dummy3"/>
+    <origin xyz="0 -0.017 -0.125" rpy="3.14 0 0"/>
+  </joint>
+  <joint name="tibia4_to_dummy4" type="fixed">
+    <parent link="tibia4"/>
+    <child link="dummy4"/>
+    <origin xyz="0 -0.017 -0.125" rpy="3.14 0 0"/>
+  </joint>
+  <gazebo reference="body">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="case1">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="case2">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="case3">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="case4">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="femur1">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="femur2">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="femur3">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="femur4">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="tibia1">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="tibia2">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="tibia3">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="tibia4">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="imu_sensor_link">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  
+  <gazebo reference="depth_camera_link">
+    <sensor type="depth" name="camera">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <visualize>1</visualize>
+      <update_rate>40</update_rate>
+
+        <plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
+          <baseline>0.2</baseline>
+          <alwaysOn>true</alwaysOn>
+          <!-- Keep this zero, update_rate in the parent <sensor> tag
+            will control the frame rate. -->
+          <updateRate>0.0</updateRate>
+          <cameraName>camera_ir</cameraName>
+          <robotNamespace>/</robotNamespace>
+          <imageTopicName>/camera/depth/image_raw</imageTopicName>
+          <cameraInfoTopicName>/camera/depth/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+          <depthImageInfoTopicName>/camera/depth/camera_info</depthImageInfoTopicName>
+          <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
+          <frameName>camera_image_link</frameName>
+          <pointCloudCutoff>0.05</pointCloudCutoff>
+          <distortionK1>0</distortionK1>
+          <distortionK2>0</distortionK2>
+          <distortionK3>0</distortionK3>
+          <distortionT1>0</distortionT1>
+          <distortionT2>0</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>
+    </sensor>
+    <static>true</static>
+  </gazebo>
+  
+  <gazebo reference="imu_sensor_link">
+    <gravity>1</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>1</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_sensor_link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_sensor_link</frameName>
+        <initialOrientationAsReference>0</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/polydog_controller</robotNamespace>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+      <robotNamespace>/polydog_controller</robotNamespace>
+        <jointName>FR1_joint, FR2_joint, FR3_joint, FL1_joint, FL2_joint, FL3_joint, RR1_joint, RR2_joint, RR3_joint, RL1_joint, RL2_joint, RL3_joint</jointName>
+        <updateRate>100</updateRate>
+    </plugin>
+  </gazebo>
+  <transmission name="trans11">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FR1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor11">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans12">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FR2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor12">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans13">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FR3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor13">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans21">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FL1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor21">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans22">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FL2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor22">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans23">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FL3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor23">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans31">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor31">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans32">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor32">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans33">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor33">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans41">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RL1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor41">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans42">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RL2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor42">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans43">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RL3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor43">
+      <mechanicalReduction>5</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+
+
+
+</robot>

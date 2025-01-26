@@ -1,0 +1,28 @@
+<launch>
+
+    <!-- Gazebo Simulation -->
+    <!-- <include file="$(find polydog_gazebo)/launch/simulation.launch" /> -->
+    
+    <!-- Rviz -->
+    <!-- <include file="$(find polydog_description)/launch/polydog_rviz.launch" /> -->
+    
+    <!-- Joystick -->
+    <include file="$(find polydog_joystick)/launch/ramped_joystick.launch" />
+    
+
+    <!-- Robot Controller -->
+    <include file="$(find polydog_controller)/launch/robot_controller.launch"/>
+    
+    <!-- Robot Model -->
+    <include file="$(find polydog_description)/launch/polydog_rviz.launch"/>
+    
+    <!-- RP lidar -->
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+    
+    <!-- SLAM -->
+    <include file="$(find hector_slam_launch)/launch/tutorial.launch"/>
+    
+    <!-- Navigation -->
+    <include file="$(find navigation)/launch/navigation.launch"/>
+
+</launch>
